@@ -1,0 +1,67 @@
+:root {
+  font-family: "Heebo", sans-serif;
+  --font-header: "BespokeSans-Variable", sans-serif;
+
+  --button-font-size: 0.94rem;
+
+  --max-content-width: 68rem;
+  --content-padding: 3rem;
+  --calculated-content-padding: max(var(--content-padding), calc((100vw - var(--max-content-width)) / 2));
+
+  /* Colors */
+  --background-color: #F2F4F6;
+
+  --primary-color: hsl(225, 100%, 50%);
+  --primary-bg-color: hsla(225, 100%, 50%, 0.05);
+
+  --secondary-color: hsl(239, 100%, 11%);
+  --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
+
+
+  --text-color: #4d4d4d;
+  --title-color: #00013A;
+
+  --header-backdrop-image: url("/images/backdrops/backdrop-026.jpg");
+  --header-backdrop-position: "center 0%";
+  --backdrop-skew-rotation: -5deg;
+  /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */
+  --backdrop-skew-tan: 0.08748866353; 
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  font-size: 1.125rem;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+strong {
+  font-weight: 700;
+}
+p {
+  margin: 0 0 1.5rem 0;
+}
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+small {
+  font-size: 0.75em;
+}
+
+#svelte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: var(--font-header);
+}
