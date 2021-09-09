@@ -8,14 +8,14 @@
 <nav>
   <ul>
     <li>
-      <a sveltekit:prefetch href="/" class:active={section === ''}>Dropzone.js</a>
+      <a sveltekit:prefetch href="/js" class:active={section === 'js'}>Dropzone.js</a>
     </li>
     <li>
       <a sveltekit:prefetch href="/plus" class:active={section === 'plus'}>Dropzone Plus</a>
     </li>
     <li>|</li>
     <li>
-      <a href="http://dropzone.gitbook.io" target="_blank" rel="nofollow">
+      <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow">
         <span class="icon"><IoMdBook /></span>
         Documentation
       </a>

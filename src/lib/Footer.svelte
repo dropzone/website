@@ -16,7 +16,10 @@
       <a href="/plus">Dropzone Plus</a>
     </li>
     <li>
-      <a href="https://dropzone.gitbook.io">Documentation</a>
+      <a href="https://docs-plus.dropzone.dev">Dropzone Plus Docs</a>
+    </li>
+    <li>
+      <a href="https://docs.dropzone.dev">Dropzone.js Docs</a>
     </li>
     <li>
       <a href="https://github.com/dropzone/dropzone">GitHub</a>
@@ -25,10 +28,10 @@
       <a href="mailhref:support@dropzone.dev">Support</a>
     </li>
     <li>
-      <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+      <a href="/terms-of-service">Terms of Service</a>
     </li>
     <li>
-      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
     </li>
   </ul>
 </footer>

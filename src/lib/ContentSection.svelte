@@ -1,7 +1,5 @@
 <script>
-  import Block from './Block.svelte';
-
-  export let backgroundColor;
+  export let backgroundColor = 'transparent';
 </script>
 
 <section class="wrapper">

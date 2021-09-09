@@ -17,7 +17,6 @@
   --secondary-color: hsl(239, 100%, 11%);
   --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
 
-
   --text-color: #4d4d4d;
   --title-color: #00013A;
 
@@ -64,4 +63,7 @@ small {
 h1 {
   font-weight: bold;
   font-family: var(--font-header);
+}
+h3 {
+  font-weight: bold;
 }
