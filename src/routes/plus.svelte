@@ -3,17 +3,7 @@
   import StyledLink from '$lib/StyledLink.svelte';
   import ContentSection from '$lib/ContentSection.svelte';
   import Heading from '$lib/Heading.svelte';
-
-  import { onDestroy, onMount } from 'svelte';
-  import { headerImage, titleColor } from '$lib/stores';
-  onMount(() => {
-    headerImage.set('plus.jpg');
-    titleColor.set(null);
-  });
-  onDestroy(() => {
-    headerImage.set(null);
-    titleColor.set(null);
-  });
+  import Actions from '$lib/Actions.svelte';
 </script>
 
 <svelte:head>
@@ -31,10 +21,10 @@
     <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
   </p>
 
-  <div class="actions">
+  <Actions>
     <StyledLink href="/plus" color="secondary">Get Started</StyledLink>
     <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
-  </div>
+  </Actions>
 
   <div slot="visual" class="visual" />
 </Intro>

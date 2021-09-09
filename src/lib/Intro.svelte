@@ -23,7 +23,7 @@
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 3rem;
-    color: var(--title-color);
+    color: var(--intro-title-color);
     line-height: 90%;
   }
 

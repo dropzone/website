@@ -3,18 +3,9 @@
   import StyledLink from '$lib/StyledLink.svelte';
   import ContentSection from '$lib/ContentSection.svelte';
   import Heading from '$lib/Heading.svelte';
-
-  import { onDestroy, onMount } from 'svelte';
-  import { headerImage, titleColor } from '$lib/stores';
-
-  onMount(() => {
-    headerImage.set('js.jpg');
-    titleColor.set('white');
-  });
-  onDestroy(() => {
-    headerImage.set(null);
-    titleColor.set(null);
-  });
+  import Actions from '$lib/Actions.svelte';
+  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte';
+  import Dropzone from '$lib/Dropzone.svelte';
 </script>
 
 <svelte:head>
@@ -23,19 +14,92 @@
 
 <Intro title="File uploads made easy">
   <p>
-    Use the free and Open Source JavaScript library Dropzone.js to handle drag and dropping of files
-    into your form.
+    <strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It is
+    fully open source, and makes it easy for you to handle dropped files on your website.
   </p>
 
-  <p>
-    If you don't want to maintain your own server, simply use{' '}
-    <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
-  </p>
+  <p>It's meant to look good by default, and is highly customizable.</p>
 
-  <div class="actions">
-    <StyledLink href="/plus" color="secondary">Get Started</StyledLink>
-    <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
-  </div>
+  <Actions>
+    <StyledLink href="https://docs.dropzone.dev/" color="secondary">Documentation</StyledLink>
+    <StyledLink
+      href="https://github.com/dropzone/dropzone/releases/latest/download/dist.zip"
+      color="secondary"
+      variant="text">Download</StyledLink
+    >
+  </Actions>
 
-  <div slot="visual" class="visual" />
+  <div slot="visual" class="visual"><Dropzone /></div>
 </Intro>
+<ContentSection backgroundColor="white">
+  <div class="main-features">
+    <section class="main-feature">
+      <div class="main-feature__icon-header">
+        <img src="/images/icons/github.svg" alt="GitHub" />
+      </div>
+      <h3>Source Code on GitHub</h3>
+      <p>
+        You can get all the source code on GitHub, as well as installation instructions. If you
+        encounter an issue with this library, this is the place to create an issue.
+      </p>
+      <div class="main-feature__actions">
+        <StyledLink href="https://github.com/dropzone/dropzone">GitHub</StyledLink>
+      </div>
+    </section>
+    <section class="main-feature">
+      <div class="main-feature__icon-header">
+        <img src="/images/icons/gitbook.svg" alt="GitBook" />
+      </div>
+      <h3>Documentation</h3>
+      <p>
+        All the documentation about Dropzone, and the multiple ways to configure and customise it,
+        can be found on GitBook.
+      </p>
+      <div class="main-feature__actions">
+        <StyledLink href="https://docs.dropzone.dev">Docs</StyledLink>
+      </div>
+    </section>
+    <section class="main-feature">
+      <div class="main-feature__icon-header">
+        <img src="/images/icons/stackoverflow.svg" alt="Stackoverflow" />
+        <span class="plus-icon-container"><IoMdAdd /></span>
+        <img src="/images/icons/github.svg" alt="GitHub" />
+      </div>
+      <h3>Questions and Support</h3>
+      <p>
+        If you need help, there are{' '}
+        <a href="https://github.com/dropzone/dropzone/discussions"> GitHub Discussions </a>{' '}
+        and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people helping you out.
+      </p>
+      <div class="main-feature__actions">
+        <StyledLink href="https://www.stackoverflow.com">Stack Overflow</StyledLink>
+      </div>
+    </section>
+  </div>
+</ContentSection>
+
+<style>
+  .main-features {
+    display: flex;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .main-feature {
+    flex: 1;
+    min-width: 12em;
+    margin-bottom: 1.5rem;
+  }
+  .main-feature__actions {
+    text-align: right;
+  }
+  .main-feature__icon-header {
+    margin-bottom: 1rem;
+  }
+  .plus-icon-container {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem;
+    width: 2rem;
+  }
+</style>

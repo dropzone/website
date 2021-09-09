@@ -34,6 +34,6 @@
     flex: 1;
   }
   main.white-title {
-    --title-color: white;
+    --intro-title-color: white;
   }
 </style>

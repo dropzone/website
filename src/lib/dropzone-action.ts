@@ -1,0 +1,75 @@
+import type { DropzoneFile } from 'dropzone';
+
+import { browser } from '$app/env';
+
+interface DropzoneWithSubmit extends Dropzone {
+  submitRequest: (xhr: XMLHttpRequest, formData: FormData, files: DropzoneFile[]) => void;
+}
+export type Action = (
+  node: HTMLElement
+) => {
+  destroy?: () => void;
+};
+
+export default async function loadDropzoneAction(): Promise<Action> {
+  if (browser) {
+    const pkg = await import('dropzone');
+    const Dropzone = pkg.default;
+    Dropzone.autoDiscover = false;
+
+    return (node: HTMLDivElement) => {
+      const dropzone = new Dropzone(node, {
+        url: '/',
+        maxFiles: 4,
+        parallelUploads: 1,
+        uploadMultiple: false
+      }) as DropzoneWithSubmit;
+
+      // Prevent more than 4 files to be added.
+      const originalAddFile = dropzone.addFile.bind(dropzone);
+      dropzone.addFile = (...params) => {
+        if (dropzone.files.length < 4) {
+          originalAddFile(...params);
+        }
+      };
+
+      const timeouts = [];
+
+      dropzone.submitRequest = (_, __, files) => {
+        const steps = 8;
+        const totalMs = 2000;
+
+        for (let i = 0; i < steps; i++) {
+          timeouts.push(
+            setTimeout(() => {
+              dropzone.emit(
+                'uploadprogress',
+                files[0],
+                (100 / (steps - 1)) * i,
+                (files[0].size / (steps - 1)) * i
+              );
+              if (i === steps - 1) {
+                files[0].status = 'success';
+
+                dropzone.emit('success', files[0], 'success');
+                dropzone.emit('complete', files[0]);
+                dropzone.processQueue();
+
+                if (dropzone.getFilesWithStatus('success').length == 4) {
+                  dropzone.disable();
+                }
+              }
+            }, (totalMs / steps) * i)
+          );
+        }
+      };
+
+      return {
+        destroy: () => {
+          timeouts.forEach((tid) => clearTimeout(tid));
+          dropzone.destroy();
+        }
+      };
+    };
+  }
+}

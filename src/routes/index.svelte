@@ -5,6 +5,7 @@
   import Heading from '$lib/Heading.svelte';
   import FeatureSet from '$lib/FeatureSet.svelte';
   import Feature from '$lib/Feature.svelte';
+  import Actions from '$lib/Actions.svelte';
 </script>
 
 <svelte:head>
@@ -22,10 +23,10 @@
     <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
   </p>
 
-  <div class="actions">
+  <Actions>
     <StyledLink href="/plus" color="secondary">Get Started</StyledLink>
     <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
-  </div>
+  </Actions>
 
   <div slot="visual" class="visual">
     <img src="/images/dropzone-grid.png" alt="Dropzone example" />
@@ -57,12 +58,12 @@
     </Feature>
   </FeatureSet>
 
-  <div class="actions">
+  <Actions>
     <StyledLink href="https://plus.dropzone.dev/register" color="primary"
       >Create your account</StyledLink
     >
     <StyledLink href="/plus" color="primary" variant="text">Learn more</StyledLink>
-  </div>
+  </Actions>
 </ContentSection>
 
 <ContentSection>
@@ -128,23 +129,15 @@
     </Feature>
   </FeatureSet>
 
-  <div class="actions">
+  <Actions>
     <StyledLink href="/js" color="primary">Learn more</StyledLink>
     <StyledLink href="https://docs.dropzone.dev" color="primary" variant="text"
       >Documentation</StyledLink
     >
-  </div>
+  </Actions>
 </ContentSection>
 
 <style>
-  .actions {
-    margin: 1.5rem -0.2rem 0;
-  }
-  .actions :global(a) {
-    margin: 0 0.2rem;
-    font-weight: bold;
-  }
-
   .visual {
     background: white;
     padding: 2.5rem;
