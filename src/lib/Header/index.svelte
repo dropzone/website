@@ -2,16 +2,9 @@
   import StyledLink from '$lib/StyledLink.svelte';
   import Menu from './Menu.svelte';
   import InlineSvg from 'svelte-inline-svg';
-
-  import { headerImage } from '$lib/stores';
-
-  const style =
-    $headerImage == null
-      ? null
-      : `--header-backdrop-image: url('/images/backdrops/{${$headerImage} ?? 'backdrop-026.jpg'};`;
 </script>
 
-<div class="backdrop" {style} />
+<div class="backdrop" />
 
 <header>
   <a href="/"><InlineSvg src="/images/white_logo.svg" /></a>

@@ -20,7 +20,7 @@
   --text-color: #4d4d4d;
   --title-color: #00013A;
 
-  --header-backdrop-image: url("/images/backdrops/backdrop-026.jpg");
+  --header-backdrop-image: url("/images/backdrops/default.jpg");
   --header-backdrop-position: "center 0%";
   --backdrop-skew-rotation: -5deg;
   /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */

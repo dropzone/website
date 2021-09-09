@@ -5,10 +5,16 @@
   import Heading from '$lib/Heading.svelte';
 
   import { onDestroy, onMount } from 'svelte';
-  import { headerImage } from '$lib/stores';
+  import { headerImage, titleColor } from '$lib/stores';
 
-  onMount(() => headerImage.set('backdrop-015.jpg'));
-  onDestroy(() => headerImage.set(null));
+  onMount(() => {
+    headerImage.set('js.jpg');
+    titleColor.set('white');
+  });
+  onDestroy(() => {
+    headerImage.set(null);
+    titleColor.set(null);
+  });
 </script>
 
 <svelte:head>

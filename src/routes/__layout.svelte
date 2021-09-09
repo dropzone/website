@@ -7,11 +7,22 @@
 
   import '../style/app.css';
   import Footer from '$lib/Footer.svelte';
+
+  import { page } from '$app/stores';
+
+  let section;
+  let headerImage;
+  $: {
+    section = $page.path.split('/')[1];
+
+    if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`;
+    else headerImage = null;
+  }
 </script>
 
-<Header />
+<Header --header-backdrop-image={headerImage} />
 
-<main>
+<main class:white-title={section == 'js'}>
   <slot />
 </main>
 
@@ -22,23 +33,7 @@
     position: relative;
     flex: 1;
   }
-
-  footer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-  }
-
-  footer a {
-    font-weight: bold;
-  }
-
-  @media (min-width: 480px) {
-    footer {
-      padding: 40px 0;
-    }
+  main.white-title {
+    --title-color: white;
   }
 </style>
