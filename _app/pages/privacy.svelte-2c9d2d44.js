@@ -1,0 +1,1 @@
+import{S as s,i as t,s as a,R as e,d as c,K as o}from"../chunks/vendor-af2abc2d.js";function n(s){return{c(){this.h()},l(s){e('[data-svelte="svelte-gnlb63"]',document.head).forEach(c),this.h()},h(){document.title="Privacy Policy"},m:o,p:o,i:o,o:o,d:o}}class r extends s{constructor(s){super(),t(this,s,null,n,a,{})}}export{r as default};

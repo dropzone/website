@@ -15,25 +15,29 @@
     <title>Dropzone Plus</title>
     <link rel="manifest" href="manifest.webmanifest" />
 
+    <link href="https://unpkg.com/dropzone@^5/dist/min/dropzone.min.css" rel="stylesheet" />
+
     <title>Dropzone.js</title>
 
 		
 
-		<link rel="modulepreload" href="/_app/start-b797ce93.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-821bf125.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-b6d98a94.js">
-		<link rel="modulepreload" href="/_app/chunks/StyledLink-a2c4cb2f.js">
-		<link rel="modulepreload" href="/_app/pages/js.svelte-661cb71c.js">
-		<link rel="modulepreload" href="/_app/chunks/Heading.svelte_svelte&type=style&lang-9798535d.js">
-		<link rel="modulepreload" href="/_app/chunks/stores-26f70f21.js">
+		<link rel="modulepreload" href="/_app/start-30dbb522.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-af2abc2d.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-89336a88.js">
+		<link rel="modulepreload" href="/_app/chunks/StyledLink-68cdb682.js">
+		<link rel="modulepreload" href="/_app/pages/js.svelte-93bf1a05.js">
+		<link rel="modulepreload" href="/_app/chunks/Actions-e3fdbaf7.js">
+		<link rel="modulepreload" href="/_app/chunks/ContentSection-24824057.js">
 		<link rel="stylesheet" href="/_app/assets/start-fcddce2f.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-f1cf73fb.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-496a77bc.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-bc393c79.css">
 		<link rel="stylesheet" href="/_app/assets/StyledLink-59811d8a.css">
-		<link rel="stylesheet" href="/_app/assets/Heading.svelte_svelte&type=style&lang-1515f71c.css">
+		<link rel="stylesheet" href="/_app/assets/pages/js.svelte-8ea6e764.css">
+		<link rel="stylesheet" href="/_app/assets/Actions-1f753094.css">
 
 		<script type="module">
-			import { start } from "/_app/start-b797ce93.js";
+			import { start } from "/_app/start-30dbb522.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -46,8 +50,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-b6d98a94.js"),
-						import("/_app/pages/js.svelte-661cb71c.js")
+						import("/_app/pages/__layout.svelte-89336a88.js"),
+						import("/_app/pages/js.svelte-93bf1a05.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -79,21 +83,43 @@
   <a href="https://plus.dropzone.dev" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-fzjd5i  contained">Sign in <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
 </header></div>
 
-<main class="svelte-1qlowbm white-title">
+<main class="svelte-hvzjob white-title">
 
-<section class="wrapper svelte-h1wxft"><div><h1 class="svelte-h1wxft">File uploads made easy</h1>
+<section class="wrapper svelte-18mf2v2"><div><h1 class="svelte-18mf2v2">File uploads made easy</h1>
 
-    <p>Use the free and Open Source JavaScript library Dropzone.js to handle drag and dropping of files
-    into your form.
+    <p><strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It is
+    fully open source, and makes it easy for you to handle dropped files on your website.
   </p>
 
-  <p>If you don&#39;t want to maintain your own server, simply use 
-    <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
-  </p>
+  <p>It&#39;s meant to look good by default, and is highly customizable.</p>
 
-  <div class="actions"><a href="/plus" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-fzjd5i outlined">Get Started <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
-    <a href="/js" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-fzjd5i   text">Dropzone.js <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
-  <div class="visual svelte-h1wxft"><div slot="visual" class="visual"></div></div>
+  <div class="actions svelte-19mikef"><a href="https://docs.dropzone.dev/" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-fzjd5i outlined">Documentation <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
+    <a href="https://github.com/dropzone/dropzone/releases/latest/download/dist.zip" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-fzjd5i   text">Download <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
+  <div class="visual svelte-18mf2v2"><div slot="visual" class="visual"><div class="dropzone-container svelte-9qci9r">
+</div></div></div>
+</section>
+<section class="wrapper svelte-6rvzj9"><div class="backdrop svelte-6rvzj9" style="background-color: white;"></div>
+  <div class="main-features svelte-12vdrtw"><section class="main-feature svelte-12vdrtw"><div class="main-feature__icon-header svelte-12vdrtw"><img src="/images/icons/github.svg" alt="GitHub"></div>
+      <h3>Source Code on GitHub</h3>
+      <p>You can get all the source code on GitHub, as well as installation instructions. If you
+        encounter an issue with this library, this is the place to create an issue.
+      </p>
+      <div class="main-feature__actions svelte-12vdrtw"><a href="https://github.com/dropzone/dropzone" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-fzjd5i outlined">GitHub <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></section>
+    <section class="main-feature svelte-12vdrtw"><div class="main-feature__icon-header svelte-12vdrtw"><img src="/images/icons/gitbook.svg" alt="GitBook"></div>
+      <h3>Documentation</h3>
+      <p>All the documentation about Dropzone, and the multiple ways to configure and customise it,
+        can be found on GitBook.
+      </p>
+      <div class="main-feature__actions svelte-12vdrtw"><a href="https://docs.dropzone.dev" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-fzjd5i outlined">Docs <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></section>
+    <section class="main-feature svelte-12vdrtw"><div class="main-feature__icon-header svelte-12vdrtw"><img src="/images/icons/stackoverflow.svg" alt="Stackoverflow">
+        <span class="plus-icon-container svelte-12vdrtw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svelte-3h8371"><path d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"></path></svg></span>
+        <img src="/images/icons/github.svg" alt="GitHub"></div>
+      <h3>Questions and Support</h3>
+      <p>If you need help, there are 
+        <a href="https://github.com/dropzone/dropzone/discussions">GitHub Discussions </a> 
+        and Stackoverflow. Use the tag dropzonejs and there&#39;ll be plenty of people helping you out.
+      </p>
+      <div class="main-feature__actions svelte-12vdrtw"><a href="https://www.stackoverflow.com" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-fzjd5i outlined">Stack Overflow <span class="icon svelte-fzjd5i"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></section></div>
 </section></main>
 
 <footer class="svelte-6afh52"><a href="/" class="logo svelte-6afh52"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a>
