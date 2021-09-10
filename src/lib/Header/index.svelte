@@ -33,7 +33,7 @@
   }
 
   .backdrop {
-    --height: 18rem;
+    --height: linearClamp(tiny, large, 17, 18);
     background-image: var(--header-backdrop-image);
     background-position: var(--header-backdrop-position);
     background-size: cover;

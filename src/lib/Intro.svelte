@@ -15,8 +15,15 @@
   .wrapper {
     padding: 4rem var(--calculated-content-padding) 4.5rem;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     grid-auto-columns: 1fr;
+    grid-gap: 4.5rem;
+  }
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+    }
   }
 
   h1 {

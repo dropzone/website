@@ -14,8 +14,8 @@
 
 <Intro title="Tools to build great forms">
   <p>
-    Use the free and Open Source JavaScript library Dropzone.js to handle drag and dropping of files
-    into your form.
+    Use the free and Open Source JavaScript library <strong>Dropzone.js</strong> to handle drag and dropping
+    of files into your form.
   </p>
 
   <p>
@@ -145,8 +145,8 @@
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
   }
   .visual img {
+    max-width: 100%;
     width: 270px;
-    height: 270px;
     display: block;
   }
 </style>

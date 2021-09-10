@@ -8,6 +8,8 @@
 
 <a
   {href}
+  target={href.startsWith('http') ? '_blank' : null}
+  rel={href.startsWith('http') ? 'nofollow' : null}
   style="--color: var(--{color}-color); --bg-color: var(--{color}-bg-color);"
   class:outlined={variant === 'outlined'}
   class:contained={variant === 'contained'}

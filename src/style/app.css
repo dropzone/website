@@ -19,7 +19,7 @@ p {
 }
 a,
 a:visited {
-  color: inherit;
+  color: var(--primary-color);
   text-decoration: none;
 }
 small {

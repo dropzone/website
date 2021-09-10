@@ -31,17 +31,17 @@
     border-radius: 2.5rem;
     border: 3px solid white;
     background: white;
-    max-width: 100%;
     width: 21.875rem;
     height: 21.875rem;
+    width: 100%;
+    max-width: 21.875rem;
     margin: auto;
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
   }
   .dropzone {
-    display: block;
     height: 100%;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     border: none;
     display: flex;
     justify-content: center;
@@ -54,16 +54,18 @@
     border-color: var(--primary-color);
   }
 
-  .dropzone:global(.dz-started) {
+  .dropzone-container :global(.dropzone.dz-started) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1rem;
+    /* grid-gap: 1rem; */
   }
-  :global(.dz-preview) {
-    margin: auto;
+  .dropzone-container :global(.dropzone .dz-preview) {
+    margin: 0.5rem;
+    justify-self: center;
+    align-self: center;
   }
-  :global(.dz-preview.dz-image) {
+  .dropzone-container :global(.dropzone .dz-preview.dz-image) {
     background: transparent;
   }
 

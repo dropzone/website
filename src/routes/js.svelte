@@ -29,7 +29,7 @@
     >
   </Actions>
 
-  <div slot="visual" class="visual"><Dropzone /></div>
+  <Dropzone slot="visual" />
 </Intro>
 <ContentSection backgroundColor="white">
   <div class="main-features">
@@ -72,7 +72,9 @@
         and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people helping you out.
       </p>
       <div class="main-feature__actions">
-        <StyledLink href="https://www.stackoverflow.com">Stack Overflow</StyledLink>
+        <StyledLink href="https://stackoverflow.com/questions/tagged/dropzone.js"
+          >Stack Overflow</StyledLink
+        >
       </div>
     </section>
   </div>

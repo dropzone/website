@@ -1,4 +1,6 @@
-<script>
+<script type="ts">
+  import { page } from '$app/stores';
+  import { onDestroy } from 'svelte';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
   import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
   import InlineSvg from 'svelte-inline-svg';
@@ -9,6 +11,9 @@
   function toggle() {
     isOpen = !isOpen;
   }
+
+  let unsubscribe = page.subscribe(() => (isOpen = false));
+  onDestroy(unsubscribe);
 </script>
 
 <div class="mobile-menu">
@@ -32,6 +37,9 @@
 </nav>
 
 <style>
+  a {
+    color: inherit;
+  }
   .mobile-menu {
     flex: 1;
     display: flex;
@@ -56,14 +64,15 @@
   }
   .toggle {
     height: 1.5rem;
+    width: 1.5rem;
   }
   nav {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     padding: 3rem;
     background: white;
     justify-content: center;

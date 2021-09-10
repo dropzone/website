@@ -28,5 +28,3 @@
 
   <div slot="visual" class="visual" />
 </Intro>
-
-c

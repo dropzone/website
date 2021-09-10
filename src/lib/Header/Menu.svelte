@@ -54,7 +54,7 @@
     </a>
     <a
       class="link link--pill link--icon"
-      href="https://github.com/dropzone/dropzone"
+      href="https://twitter.com/dropzonedev"
       target="_blank"
       rel="nofollow"
     >
@@ -92,6 +92,10 @@
   }
   nav.mobile > * {
     margin: 2rem 0;
+  }
+
+  a {
+    color: inherit;
   }
 
   /* All links in the menu */

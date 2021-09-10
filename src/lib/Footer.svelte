@@ -44,6 +44,9 @@
     padding: 0 1.5rem 9rem;
     background: linear-gradient(to bottom, transparent, hsl(225deg 100% 70% / 10%));
   }
+  a {
+    color: inherit;
+  }
   .logo {
     display: block;
     margin-bottom: 1.5rem;
