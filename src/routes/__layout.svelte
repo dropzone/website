@@ -43,6 +43,7 @@
       var(--content-padding),
       calc((100vw - var(--max-content-width)) / 2)
     );
+    --content-vertical-padding: linearClamp(tiny, huge, 3, 9);
 
     --menu-item-height: 2.25rem;
 

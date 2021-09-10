@@ -11,15 +11,15 @@
   .wrapper {
     position: relative;
     display: block;
-    padding: 3rem var(--calculated-content-padding);
+    padding: var(--content-vertical-padding) var(--calculated-content-padding);
   }
 
   .backdrop {
     position: absolute;
     width: 100%;
     left: 0;
-    top: -3rem;
-    bottom: -3rem;
+    top: 0;
+    bottom: 0;
     transform: skew(0deg, var(--backdrop-skew-rotation));
     z-index: -1;
   }

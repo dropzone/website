@@ -1,8 +1,9 @@
 <script type="ts">
   import { page } from '$app/stores';
   import StyledLink from '$lib/StyledLink.svelte';
-  import IoLogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
-  import IoLogoTwitterfrom from 'svelte-icons/io/IoLogoTwitter.svelte';
+  import LogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
+  import LogoTwitter from 'svelte-icons/io/IoLogoTwitter.svelte';
+  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte';
   import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
   import InlineSvg from 'svelte-inline-svg';
   $: section = $page.path.split('/')[1];
@@ -50,7 +51,7 @@
       target="_blank"
       rel="nofollow"
     >
-      <span class="link__icon"><IoLogoGithub /></span>
+      <span class="link__icon"><LogoGithub /></span>
     </a>
     <a
       class="link link--pill link--icon"
@@ -58,7 +59,15 @@
       target="_blank"
       rel="nofollow"
     >
-      <span class="link__icon"><IoLogoTwitterfrom /></span>
+      <span class="link__icon"><LogoTwitter /></span>
+    </a>
+    <a
+      class="link link--pill link--icon"
+      href="https://blog.dropzone.dev"
+      target="_blank"
+      rel="nofollow"
+    >
+      <span class="link__icon"><LogoMedium /></span>
     </a>
     <span /><!-- spacer -->
     <StyledLink href="https://plus.dropzone.dev" variant="contained">Sign in</StyledLink>

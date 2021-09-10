@@ -54,13 +54,15 @@
       </p>
     </Feature>
     <Feature title="Handle files">
-      <p>Let your users send you files through a form on your website and get them via email.</p>
+      <p>
+        Let your users send you files through a form on your website and get a link to them via
+        email or access them in the dashboard.
+      </p>
     </Feature>
   </FeatureSet>
 
   <Actions>
-    <StyledLink href="https://plus.dropzone.dev/register" color="primary"
-      >Create your account</StyledLink
+    <StyledLink href="https://plus.dropzone.dev/register" color="primary">Create account</StyledLink
     >
     <StyledLink href="/plus" color="primary" variant="text">Learn more</StyledLink>
   </Actions>
