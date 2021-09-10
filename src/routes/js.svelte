@@ -8,6 +8,7 @@
   import Dropzone from '$lib/Dropzone.svelte';
   import MainFeatures from '$lib/MainFeatures.svelte';
   import MainFeature from '$lib/MainFeature.svelte';
+  import CheckList from '$lib/CheckList.svelte';
 </script>
 
 <svelte:head>
@@ -71,6 +72,60 @@
   </MainFeatures>
 </ContentSection>
 
+<ContentSection>
+  <Heading subtitle="And it's easy to add the features you want"
+    >Dropzone.js comes feature packed</Heading
+  >
+  <div class="features">
+    <div class="features__description">
+      <h2>Built to last</h2>
+      <p>
+        Dropzone is a robust library trusted by millions. It started in 2012 with compatibility in
+        mind. Whether your users use an outdated browser, or have JavaScript enabled, Dropzone got
+        you covered.
+      </p>
+    </div>
+    <div class="features__list">
+      <CheckList
+        items={[
+          'Chunked uploads',
+          'Error handling',
+          'Well tested',
+          'Wide browser support',
+          'Fallback without JavaScript',
+          'Fully customizable',
+          'Open Source',
+          'Translation support',
+          'jQuery plugin',
+          'File queues',
+          'Multiple installation options'
+        ]}
+      />
+    </div>
+  </div>
+  <div class="features">
+    <div class="features__description">
+      <h2>Looking good by default</h2>
+      <p>
+        One main goal when creating Dropzone was to have file previews that are not only practical,
+        but also look good. That's why the default design of Dropzone looks great without you
+        needing to do anything.
+      </p>
+    </div>
+    <div class="features__list">
+      <CheckList
+        items={[
+          'Good looking defaults',
+          'Image Previews',
+          'Progress Bars',
+          'Success & error icons',
+          'Themes'
+        ]}
+      />
+    </div>
+  </div>
+</ContentSection>
+
 <style>
   .plus-icon-container {
     display: inline-block;
@@ -78,5 +133,28 @@
     height: 2rem;
     margin: 0 1rem;
     width: 2rem;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 800px) {
+    .features {
+      flex-direction: row;
+      gap: 3rem;
+    }
+    .features__list {
+      padding-top: 1.5rem;
+    }
+  }
+  .features__description h2 {
+    font-weight: bold;
+    color: var(--title-color);
+  }
+  .features__description,
+  .features__list {
+    flex: 1;
   }
 </style>
