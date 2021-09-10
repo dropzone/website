@@ -9,6 +9,7 @@
   import Footer from '$lib/Footer.svelte';
 
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
 
   let section;
   let headerImage;
@@ -18,6 +19,12 @@
     if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`;
     else headerImage = null;
   }
+
+  onMount(() => {
+    new Image().src = '/images/backdrops/default.jpg';
+    new Image().src = '/images/backdrops/plus.jpg';
+    new Image().src = '/images/backdrops/js.jpg';
+  });
 </script>
 
 <Header --header-backdrop-image={headerImage} />
