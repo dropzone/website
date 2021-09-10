@@ -64,7 +64,7 @@
     --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
 
     --text-color: #4d4d4d;
-    --title-color: #00013a;
+    --title-color: #000000;
 
     --intro-title-color: var(--title-color);
 

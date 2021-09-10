@@ -34,41 +34,6 @@
 </Intro>
 
 <ContentSection backgroundColor="white">
-  <Heading subtitle="A subscription model for your forms"
-    >Let us take care of processing your forms</Heading
-  >
-  <FeatureSet>
-    <Feature title="Inexpensive">
-      <p>
-        Starting at just $4/month your form data is handled for you. No hidden costs, cancel any
-        time.
-      </p>
-    </Feature>
-    <Feature title="Easy setup">
-      <p>Get started in just a few minutes. You won't even notice you're doing it.</p>
-    </Feature>
-    <Feature title="Secure & robust">
-      <p>
-        Our servers run on kubernetes clusters and scale to your demand. No downtime or slow uploads
-        when you experience user spikes.
-      </p>
-    </Feature>
-    <Feature title="Handle files">
-      <p>
-        Let your users send you files through a form on your website and get a link to them via
-        email or access them in the dashboard.
-      </p>
-    </Feature>
-  </FeatureSet>
-
-  <Actions>
-    <StyledLink href="https://plus.dropzone.dev/register" color="primary">Create account</StyledLink
-    >
-    <StyledLink href="/plus" color="primary" variant="text">Learn more</StyledLink>
-  </Actions>
-</ContentSection>
-
-<ContentSection>
   <Heading subtitle="A JavaScript file upload library with image previews"
     >The drag'n'drop library you've come to love</Heading
   >
@@ -110,25 +75,6 @@
         <strong>a week</strong> on npm, Dropzone is quite popular.
       </p>
     </Feature>
-
-    <Feature title="Inexpensive">
-      <p>
-        Starting at just $4/month your form data is handled for you. No hidden costs, cancel any
-        time.
-      </p>
-    </Feature>
-    <Feature title="Easy setup">
-      <p>Get started in just a few minutes. You won't even notice you're doing it.</p>
-    </Feature>
-    <Feature title="Secure & robust">
-      <p>
-        Our servers run on kubernetes clusters and scale to your demand. No downtime or slow uploads
-        when you experience user spikes.
-      </p>
-    </Feature>
-    <Feature title="Handle files">
-      <p>Let your users send you files through a form on your website and get them via email.</p>
-    </Feature>
   </FeatureSet>
 
   <Actions>
@@ -137,6 +83,49 @@
       >Documentation</StyledLink
     >
   </Actions>
+</ContentSection>
+
+<ContentSection>
+  <div class="dropzone-plus">
+    <div class="dropzone-plus__content">
+      <Heading subtitle="A subscription model for your forms"
+        >Let us take care of processing your forms</Heading
+      >
+      <FeatureSet>
+        <Feature title="Inexpensive">
+          <p>
+            Starting at just $4/month your form data is handled for you. No hidden costs, cancel any
+            time.
+          </p>
+        </Feature>
+        <Feature title="Easy setup">
+          <p>Get started in just a few minutes. You won't even notice you're doing it.</p>
+        </Feature>
+        <Feature title="Secure & robust">
+          <p>
+            Our servers run on kubernetes clusters and scale to your demand. No downtime or slow
+            uploads when you experience user spikes.
+          </p>
+        </Feature>
+        <Feature title="Handle files">
+          <p>
+            Let your users send you files through a form on your website and get a link to them via
+            email or access them in the dashboard.
+          </p>
+        </Feature>
+      </FeatureSet>
+
+      <Actions>
+        <StyledLink href="https://plus.dropzone.dev/register" color="primary"
+          >Create account</StyledLink
+        >
+        <StyledLink href="/plus" color="primary" variant="text">Learn more</StyledLink>
+      </Actions>
+    </div>
+    <div class="dropzone-plus__visual">
+      <img src="/images/dropzone_plus.svg" alt="Illustration" />
+    </div>
+  </div>
 </ContentSection>
 
 <style>
@@ -150,5 +139,21 @@
     max-width: 100%;
     width: 270px;
     display: block;
+  }
+
+  .dropzone-plus__content {
+    flex: 1;
+    margin-bottom: 3rem;
+  }
+  .dropzone-plus__visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 940px) {
+    .dropzone-plus {
+      display: flex;
+    }
   }
 </style>

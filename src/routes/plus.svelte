@@ -31,7 +31,9 @@
     >
   </Actions>
 
-  <div slot="visual" class="visual" />
+  <div slot="visual" class="visual">
+    <img src="/images/dashboard.png" alt="Screenshot of dashboard" />
+  </div>
 </Intro>
 
 <ContentSection backgroundColor="white">
@@ -76,3 +78,9 @@
     </MainFeature>
   </MainFeatures>
 </ContentSection>
+
+<style>
+  .visual img {
+    width: 100%;
+  }
+</style>

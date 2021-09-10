@@ -53,7 +53,7 @@
 
   <p>You are prohibited to use Dropzone Plus for content that violates our code of ethics.</p>
 
-  <p>Content that is in contrast with our ethics includes (but is not limited by):</p>
+  <p>Content that is in contrast with our ethics includes (but is not limited to):</p>
 
   <ul>
     <li>Hate speech</li>
@@ -65,8 +65,8 @@
   </ul>
 
   <p>
-    We reserve the right to end any subscription (by the end of the subscription period) if it
-    violates our terms of service, code of conduct or ethics.
+    We reserve the right to end any subscription if it violates our terms of service, code of
+    conduct or ethics.
   </p>
 
   <h2>Hyperlinking to our Content</h2>
