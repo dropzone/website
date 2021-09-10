@@ -1,0 +1,1 @@
+import{S as s,i as e,s as t,X as a,d as o,Q as r}from"../chunks/vendor-65c102a4.js";function c(s){return{c(){this.h()},l(s){a('[data-svelte="svelte-1sfepts"]',document.head).forEach(o),this.h()},h(){document.title="Terms of Service"},m:r,p:r,i:r,o:r,d:r}}class n extends s{constructor(s){super(),e(this,s,null,c,t,{})}}export{n as default};
