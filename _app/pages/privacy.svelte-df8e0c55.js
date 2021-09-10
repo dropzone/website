@@ -1,1 +1,0 @@
-import{S as s,i as t,s as a,Z as e,d as o,T as c}from"../chunks/vendor-fa0530a7.js";function n(s){return{c(){this.h()},l(s){e('[data-svelte="svelte-gnlb63"]',document.head).forEach(o),this.h()},h(){document.title="Privacy Policy"},m:c,p:c,i:c,o:c,d:c}}class r extends s{constructor(s){super(),t(this,s,null,n,a,{})}}export{r as default};
