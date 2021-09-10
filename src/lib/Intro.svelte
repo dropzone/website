@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: linearClamp(tiny, huge, 3rem, 5rem);
     font-weight: bold;
     margin-bottom: 3rem;
     color: var(--intro-title-color);

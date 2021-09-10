@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import StyledLink from '$lib/StyledLink.svelte';
   import IoLogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
-  import IoLogoTwitterfrom from 'svelte-icons/io/IoLogotwitter.svelte';
+  import IoLogoTwitterfrom from 'svelte-icons/io/IoLogoTwitter.svelte';
   import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
   import InlineSvg from 'svelte-inline-svg';
   $: section = $page.path.split('/')[1];
