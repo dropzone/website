@@ -1,6 +1,7 @@
 <script>
-  import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
+  import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
+  import InlineSvg from 'svelte-inline-svg';
   import Menu from './Menu.svelte';
 
   let isOpen = false;
@@ -10,7 +11,11 @@
   }
 </script>
 
-<button class="toggle" on:click={toggle}><IoMdMenu /></button>
+<div class="mobile-menu">
+  <a href="/"><InlineSvg src="/images/white_logo.svg" /></a>
+
+  <button class="toggle" on:click={toggle}><IoMdMenu /></button>
+</div>
 
 <nav class:open={isOpen}>
   <button class="close" on:click={() => (isOpen = false)}><IoMdClose /></button>
@@ -20,10 +25,26 @@
     --menu-color="black"
     --menu-hover-bg-color="rgba(0, 0, 0, 0.1)"
     --menu-border-color="black"
+    --button-contained-background="black"
+    --button-contained-background-hover="rgba(0, 0, 0, 0.8)"
+    --color="black"
   />
 </nav>
 
 <style>
+  .mobile-menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: var(--menu-item-height);
+  }
+  .mobile-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
   button {
     display: inline-block;
     padding: 0;
@@ -57,7 +78,7 @@
     height: 3rem;
     width: 3rem;
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 1.5rem;
+    right: 2.25rem;
   }
 </style>

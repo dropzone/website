@@ -19,6 +19,7 @@
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
+    "postcss": "^8.3.6",
     "postcss-clamp": "./postcss-clamp",
     "postcss-color-function": "^4.1.0",
     "postcss-functions": "^4.0.2",

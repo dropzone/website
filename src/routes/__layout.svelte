@@ -29,6 +29,43 @@
 <Footer />
 
 <style>
+  :global(:root) {
+    font-family: 'Heebo', sans-serif;
+    --font-header: 'BespokeSans-Variable', sans-serif;
+
+    --button-font-size: 0.94rem;
+    --button-contained-background: rgba(255, 255, 255, 0.2);
+    --button-contained-background-hover: rgba(255, 255, 255, 0.3);
+
+    --max-content-width: 68rem;
+    --content-padding: linearClamp(tiny, medium, 1.5, 3);
+    --calculated-content-padding: max(
+      var(--content-padding),
+      calc((100vw - var(--max-content-width)) / 2)
+    );
+
+    --menu-item-height: 2.25rem;
+
+    /* Colors */
+    --background-color: #f2f4f6;
+
+    --primary-color: hsl(225, 100%, 50%);
+    --primary-bg-color: hsla(225, 100%, 50%, 0.05);
+
+    --secondary-color: hsl(239, 100%, 11%);
+    --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
+
+    --text-color: #4d4d4d;
+    --title-color: #00013a;
+
+    --intro-title-color: var(--title-color);
+
+    --header-backdrop-image: url('/images/backdrops/default.jpg');
+    --header-backdrop-position: 'center 0%';
+    --backdrop-skew-rotation: -5deg;
+    /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */
+    --backdrop-skew-tan: 0.08748866353;
+  }
   main {
     position: relative;
     flex: 1;

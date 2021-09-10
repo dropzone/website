@@ -1,33 +1,4 @@
-:root {
-  font-family: "Heebo", sans-serif;
-  --font-header: "BespokeSans-Variable", sans-serif;
 
-  --button-font-size: 0.94rem;
-
-  --max-content-width: 68rem;
-  --content-padding: 3rem;
-  --calculated-content-padding: max(var(--content-padding), calc((100vw - var(--max-content-width)) / 2));
-
-  /* Colors */
-  --background-color: #F2F4F6;
-
-  --primary-color: hsl(225, 100%, 50%);
-  --primary-bg-color: hsla(225, 100%, 50%, 0.05);
-
-  --secondary-color: hsl(239, 100%, 11%);
-  --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
-
-  --text-color: #4d4d4d;
-  --title-color: #00013A;
-
-  --intro-title-color: var(--title-color);
-
-  --header-backdrop-image: url("/images/backdrops/default.jpg");
-  --header-backdrop-position: "center 0%";
-  --backdrop-skew-rotation: -5deg;
-  /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */
-  --backdrop-skew-tan: 0.08748866353; 
-}
 
 *, *:before, *:after {
   box-sizing: border-box;

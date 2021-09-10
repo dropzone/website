@@ -1,38 +1,68 @@
 <script type="ts">
-  import IoLogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
-  import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
   import { page } from '$app/stores';
+  import StyledLink from '$lib/StyledLink.svelte';
+  import IoLogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
+  import IoLogoTwitterfrom from 'svelte-icons/io/IoLogotwitter.svelte';
+  import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
+  import InlineSvg from 'svelte-inline-svg';
   $: section = $page.path.split('/')[1];
 
   export let mobile = false;
 </script>
 
-<nav class:mobile>
-  <ul>
-    <li>
-      <a sveltekit:prefetch href="/js" class:active={section === 'js'} class="with-docs"
-        >Dropzone.js
+<nav class:mobile class:desktop={!mobile}>
+  <a class="link" href="/"><InlineSvg src="/images/white_logo.svg" /></a>
 
-        <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="docs">
-          <span class="icon"><IoMdBook /></span>
-        </a>
-      </a>
-    </li>
-    <li>
-      <a sveltekit:prefetch href="/plus" class:active={section === 'plus'} class="with-docs"
-        >Dropzone Plus
+  <div class="menu__main">
+    <a
+      sveltekit:prefetch
+      href="/js"
+      class:link--active={section === 'js'}
+      class="link link--pill link--with-docs"
+      >Dropzone.js
 
-        <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow" class="docs">
-          <span class="icon"><IoMdBook /></span>
-        </a>
+      <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs">
+        <span class="link__icon"><IoMdBook /></span>
       </a>
-    </li>
-    <li>
-      <a href="https://github.com/dropzone/dropzone" target="_blank" rel="nofollow">
-        <span class="icon"><IoLogoGithub /></span>
+    </a>
+    <a
+      sveltekit:prefetch
+      href="/plus"
+      class:link--active={section === 'plus'}
+      class="link link--pill link--with-docs"
+      >Dropzone Plus
+
+      <a
+        href="http://docs-plus.dropzone.dev"
+        target="_blank"
+        rel="nofollow"
+        class="link link--docs"
+      >
+        <span class="link__icon"><IoMdBook /></span>
       </a>
-    </li>
-  </ul>
+    </a>
+  </div>
+
+  <div class="menu__actions">
+    <a
+      class="link link--pill link--icon"
+      href="https://github.com/dropzone/dropzone"
+      target="_blank"
+      rel="nofollow"
+    >
+      <span class="link__icon"><IoLogoGithub /></span>
+    </a>
+    <a
+      class="link link--pill link--icon"
+      href="https://github.com/dropzone/dropzone"
+      target="_blank"
+      rel="nofollow"
+    >
+      <span class="link__icon"><IoLogoTwitterfrom /></span>
+    </a>
+    <span /><!-- spacer -->
+    <StyledLink href="https://plus.dropzone.dev" variant="contained">Sign in</StyledLink>
+  </div>
 </nav>
 
 <style>
@@ -43,57 +73,94 @@
   }
   nav {
     color: var(--menu-color);
-  }
-  ul {
-    display: flex;
-    align-items: center;
-    margin: 0 -1.5rem;
-  }
+    --border-width: 3px;
+    --icon-size: 1.5rem;
 
-  nav.mobile ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav.desktop {
+    margin: 0 -1rem;
+    height: var(--menu-item-height);
+  }
+  nav.desktop > * {
+    margin: 0 1rem;
+  }
+  nav.mobile {
     flex-direction: column;
   }
-  li {
-    margin: 0 1.5rem;
+  nav.mobile > * {
+    margin: 2rem 0;
   }
 
-  nav.mobile li {
-    margin: 1.5rem 0;
-  }
-  a {
+  /* All links in the menu */
+  .link {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    border: 3px solid transparent;
-    height: 2.25rem;
-    line-height: calc(2.25rem - 6px);
-    border-radius: 3rem;
-    padding: 0rem 1rem;
+    justify-content: center;
+    height: var(--menu-item-height);
+    line-height: calc(var(--menu-item-height) - var(--border-width) * 2);
     white-space: nowrap;
   }
-  a.with-docs {
-    padding-right: 0;
+  .link--pill {
+    border: var(--border-width) solid transparent;
+    border-radius: 3rem;
+    padding: 0rem 1rem;
   }
-  a:hover {
+  .link--pill:hover,
+  .link--docs:hover {
     background: var(--menu-hover-bg-color);
   }
-  a.active {
+  .link--pill.link--active {
     border-color: var(--menu-border-color);
   }
-  a.active a.docs {
+
+  .link--icon {
+    padding: 0 calc((var(--menu-item-height) - var(--icon-size)) / 2 - var(--border-width));
+  }
+  .link--icon:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .link--with-docs {
+    padding-right: 0;
+  }
+  .link--active .link--docs {
     border-left: 1px solid var(--menu-border-color);
   }
-  a.docs {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  .link--docs {
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     padding-left: 0.25rem;
-    padding-right: 0rem;
+    padding-right: 0.5rem;
     margin-left: 0.5rem;
+    margin-right: calc(0px - var(--border-width));
   }
 
-  .icon {
-    width: 1.5em;
-    height: 1.5em;
-    margin-right: 0.4em;
+  .link__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+
+  .menu__main {
+    display: flex;
+  }
+  .menu__main > :not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  nav.mobile .menu__main {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav.mobile .menu__main > * {
+    margin: 1rem 0;
+  }
+
+  .menu__actions {
+    display: flex;
+    margin: 0 -0.5rem;
+  }
+  .menu__actions > * {
+    margin: 0 0.5rem;
   }
 </style>

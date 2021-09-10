@@ -7,13 +7,13 @@
 
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a sveltekit:prefetch href="/">Home</a>
     </li>
     <li>
-      <a href="/js">Dropzone.js</a>
+      <a sveltekit:prefetch href="/js">Dropzone.js</a>
     </li>
     <li>
-      <a href="/plus">Dropzone Plus</a>
+      <a sveltekit:prefetch href="/plus">Dropzone Plus</a>
     </li>
     <li>
       <a href="https://docs-plus.dropzone.dev">Dropzone Plus Docs</a>
@@ -28,10 +28,10 @@
       <a href="mailhref:support@dropzone.dev">Support</a>
     </li>
     <li>
-      <a href="/terms-of-service">Terms of Service</a>
+      <a sveltekit:prefetch href="/terms-of-service">Terms of Service</a>
     </li>
     <li>
-      <a href="/privacy">Privacy Policy</a>
+      <a sveltekit:prefetch href="/privacy">Privacy Policy</a>
     </li>
   </ul>
 </footer>

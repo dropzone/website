@@ -26,6 +26,7 @@
     font-weight: 700;
     font-family: var(--font-header);
     font-size: var(--button-font-size);
+    white-space: nowrap;
   }
 
   .icon {
@@ -53,11 +54,11 @@
 
   .contained {
     color: white;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--button-contained-background);
     backdrop-filter: blur(10px);
   }
   .contained:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--button-contained-background-hover);
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   }
 </style>

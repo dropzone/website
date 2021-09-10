@@ -1,23 +1,16 @@
 <script type="ts">
-  import StyledLink from '$lib/StyledLink.svelte';
   import Menu from './Menu.svelte';
   import MobileMenu from './MobileMenu.svelte';
-  import InlineSvg from 'svelte-inline-svg';
 </script>
 
 <div class="backdrop" />
 
 <header>
-  <a href="/"><InlineSvg src="/images/white_logo.svg" /></a>
-
   <div class="menu">
     <Menu />
   </div>
   <div class="menu--mobile">
     <MobileMenu />
-  </div>
-  <div class="menu__sign-in">
-    <StyledLink href="https://plus.dropzone.dev" variant="contained">Sign in</StyledLink>
   </div>
 </header>
 
@@ -28,8 +21,8 @@
     padding-right: var(--calculated-content-padding);
     height: 6rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
     font-size: var(--button-font-size);
     font-family: var(--font-header);
@@ -52,18 +45,21 @@
     height: calc(var(--height) + 50vw * var(--backdrop-skew-tan));
   }
 
-  @media (max-width: 700px) {
-    .menu,
-    .menu__sign-in {
+  .menu,
+  .menu--mobile {
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .menu {
       display: none;
     }
     .menu--mobile {
       display: block;
     }
   }
-  @media (min-width: 700px) {
-    .menu,
-    .menu__sign-in {
+  @media (min-width: 900px) {
+    .menu {
       display: block;
     }
     .menu--mobile {
