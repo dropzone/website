@@ -3,12 +3,14 @@
 </script>
 
 <section class="wrapper">
-  <div>
+  <div class="title-section">
     <h1>{title}</h1>
 
     <slot />
   </div>
-  <div class="visual"><slot name="visual" /></div>
+  {#if $$slots.visual}
+    <div class="visual"><slot name="visual" /></div>
+  {/if}
 </section>
 
 <style>
@@ -26,6 +28,9 @@
     }
   }
 
+  .title-section {
+    max-width: 40rem;
+  }
   h1 {
     font-size: linearClamp(tiny, huge, 3rem, 5rem);
     font-weight: bold;

@@ -41,8 +41,9 @@
   .dropzone {
     height: 100%;
     width: 100%;
+    border-radius: 2.5rem;
     padding: 1rem;
-    border: none;
+    border-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;

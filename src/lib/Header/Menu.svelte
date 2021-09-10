@@ -138,9 +138,12 @@
   .link--with-docs {
     padding-right: 0;
   }
-  .link--active .link--docs {
-    border-left: 1px solid var(--menu-border-color);
+  .link--docs {
+    border-left: 1px solid transparent;
   }
+  /* .link--active .link--docs {
+    border-left-color: var(--menu-border-color);
+  } */
   .link--docs {
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;

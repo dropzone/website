@@ -12,18 +12,21 @@
 
 <Intro title="We handle your forms">
   <p>
-    Use the free and Open Source JavaScript library Dropzone.js to handle drag and dropping of files
-    into your form.
+    Instead of writing your own server logic to handle the submitted data of your forms, use <strong
+      >Dropzone Plus</strong
+    > to handle it for you.
   </p>
 
   <p>
-    If you don't want to maintain your own server, simply use{' '}
-    <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
+    With a few clicks you'll you have a form endpoint that accepts your data and stores it securily
+    — even files.
   </p>
 
   <Actions>
-    <StyledLink href="/plus" color="secondary">Get Started</StyledLink>
-    <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
+    <StyledLink href="https://plus.dropzone.dev" color="secondary">Create account</StyledLink>
+    <StyledLink href="https://docs-plus.dropzone.dev" color="secondary" variant="text"
+      >Documentation</StyledLink
+    >
   </Actions>
 
   <div slot="visual" class="visual" />

@@ -24,7 +24,7 @@
   </p>
 
   <Actions>
-    <StyledLink href="/plus" color="secondary">Get Started</StyledLink>
+    <StyledLink href="/plus" color="secondary">Dropzone Plus</StyledLink>
     <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
   </Actions>
 
