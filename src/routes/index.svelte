@@ -34,9 +34,16 @@
 </Intro>
 
 <ContentSection backgroundColor="white">
-  <Heading subtitle="A JavaScript file upload library with image previews"
-    >The drag'n'drop library you've come to love</Heading
-  >
+  <div class="dropzonejs-heading">
+    <div>
+      <Heading subtitle="A JavaScript file upload library with image previews"
+        >The drag'n'drop library you've come to love</Heading
+      >
+    </div>
+    <div class="dropzonejs-heading__image">
+      <img src="/images/dropzonejs-samples.png" alt="" />
+    </div>
+  </div>
   <FeatureSet>
     <Feature title="Completely free">
       <p>
@@ -139,6 +146,26 @@
     max-width: 100%;
     width: 270px;
     display: block;
+  }
+
+  .dropzonejs-heading img {
+    display: block;
+    width: 380px;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 1000px) {
+    .dropzonejs-heading {
+      display: flex;
+    }
+    .dropzonejs-heading > * {
+      flex: 1;
+    }
+    .dropzonejs-heading__image {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 1.5rem;
+    }
   }
 
   .dropzone-plus__content {
