@@ -148,7 +148,7 @@
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     padding-left: 0.25rem;
-    padding-right: 0.5rem;
+    padding-right: 0.75rem;
     margin-left: 0.5rem;
     margin-right: calc(0px - var(--border-width));
   }

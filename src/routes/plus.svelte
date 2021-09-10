@@ -6,6 +6,7 @@
   import MainFeature from '$lib/MainFeature.svelte';
   import Heading from '$lib/Heading.svelte';
   import Actions from '$lib/Actions.svelte';
+  import PricingPlans from '$lib/PricingPlans.svelte';
 </script>
 
 <svelte:head>
@@ -32,14 +33,13 @@
   </Actions>
 
   <div slot="visual" class="visual">
-    <img src="/images/dashboard.png" alt="Screenshot of dashboard" />
+    <img src="/images/dropzone_plus.svg" alt="Screenshot of dashboard" />
   </div>
 </Intro>
 
 <ContentSection backgroundColor="white">
   <MainFeatures>
     <MainFeature title="Works with any form">
-      <img slot="icon" src="/images/icons/github.svg" alt="GitHub" />
       <p>
         Whether you already have a form that's ready to go, or you're just starting building one,
         Dropzone Plus will handle it.
@@ -54,18 +54,14 @@
       >
     </MainFeature>
     <MainFeature title="Get started with just $4/month">
-      <div slot="icon">
-        <img src="/images/icons/stackoverflow.svg" alt="Stackoverflow" />
-      </div>
       <p>
         With only $4/month you'll be able to send your data to Dropzone Plus — no hidden fees, no
         surprises, no Dropzone branding.
       </p>
       <p>Cancel any time and upgrade if you need to handle more than 100 submissions/month.</p>
-      <StyledLink slot="actions" href="https://plus.dropzone.dev">Create Account</StyledLink>
+      <StyledLink slot="actions" href="https://plus.dropzone.dev">Try for free</StyledLink>
     </MainFeature>
     <MainFeature title="Documentation">
-      <img slot="icon" src="/images/icons/gitbook.svg" alt="GitBook" />
       <p>
         Head on over to our documentation to read more about how <strong>Dropzone Plus</strong> works
         and how you integrate it on your site.
@@ -79,8 +75,88 @@
   </MainFeatures>
 </ContentSection>
 
+<ContentSection>
+  <PricingPlans />
+  <div class="pricing-actions">
+    <StyledLink color="secondary" href="https://plus.dropzone.dev">Try for free</StyledLink>
+  </div>
+</ContentSection>
+
+<ContentSection backgroundColor="white">
+  <div class="faqs">
+    <h1>FAQ</h1>
+
+    <div class="questions">
+      <div class="question">
+        <h2>What happens if I receive more submissions?</h2>
+        <p>
+          If your project exceeds the allowed quota / month, then these submissions will still be
+          stored but you will not be able to access the data. These submissions will either be
+          unlocked in your next billing period, or you can upgrade your account to unlock them
+          immediately.
+        </p>
+      </div>
+      <div class="question">
+        <h2>What happens if I exceed my allowed file storage?</h2>
+        <p>
+          Submissions will still be accepted and the files will still be stored. To get access to
+          your files you have to either delete old submissions, or upgrade your account. Note: if
+          you are already on the Premium plan then you need to delete old submissions or contact
+          support.
+        </p>
+      </div>
+      <div class="question">
+        <h2>Can I upgrade or cancel my account any time?</h2>
+        <p>
+          Yes of course. You only have monthly subscriptions at Dropzone Plus, and you can cancel or
+          upgrade your subscription whenever you want.\nWhen you upgrade you only pay the pro-rated
+          amount.
+        </p>
+      </div>
+      <div class="question">
+        <h2>What happens if I miss a payment?</h2>
+        <p>
+          Don't worry we'll still collect your submissions. Just update your payment info to get
+          access to your data again.
+        </p>
+      </div>
+      <div class="question">
+        <h2>Where are my credit card data stored?</h2>
+        <p>
+          Dropzone partners with Stripe to handle your payment and store your data. Dropzone never
+          stores or sees your payment details.
+        </p>
+      </div>
+      <div class="question">
+        <h2>Is my data secure?</h2>
+        <p>
+          Yes! We take great care of making sure our infrastructure meets all modern security
+          requirements.
+        </p>
+      </div>
+    </div>
+  </div>
+</ContentSection>
+
 <style>
   .visual img {
     width: 100%;
+  }
+  .faqs h1 {
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin-bottom: 3rem;
+  }
+  .pricing-actions {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .questions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-gap: 1.5rem;
+  }
+  .question h2 {
+    font-weight: bold;
   }
 </style>

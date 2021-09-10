@@ -17,6 +17,7 @@
   .main-feature {
     flex: 1;
     min-width: 12em;
+    max-width: 26em;
     margin-bottom: 1.5rem;
   }
   .main-feature__actions {

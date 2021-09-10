@@ -40,7 +40,7 @@
   footer {
     color: var(--title-color);
     text-align: center;
-    margin-top: 24rem;
+    margin-top: 12rem;
     padding: 0 1.5rem 9rem;
     background: linear-gradient(to bottom, transparent, hsl(225deg 100% 70% / 10%));
   }

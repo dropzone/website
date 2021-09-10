@@ -3,7 +3,7 @@
 <style>
   .main-features {
     display: flex;
-    column-gap: 1.5rem;
+    column-gap: 3rem;
     flex-wrap: wrap;
   }
 </style>
