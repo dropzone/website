@@ -6,6 +6,8 @@
   import Actions from '$lib/Actions.svelte';
   import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte';
   import Dropzone from '$lib/Dropzone.svelte';
+  import MainFeatures from '$lib/MainFeatures.svelte';
+  import MainFeature from '$lib/MainFeature.svelte';
 </script>
 
 <svelte:head>
@@ -14,8 +16,10 @@
 
 <Intro title="File uploads made easy">
   <p>
-    <strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It is
-    fully open source, and makes it easy for you to handle dropped files on your website.
+    <strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It
+    is
+    <strong>free</strong>, <strong>fully open source</strong>, and makes it easy for you to handle
+    dropped files on your website.
   </p>
 
   <p>It's meant to look good by default, and is highly customizable.</p>
@@ -32,71 +36,42 @@
   <Dropzone slot="visual" />
 </Intro>
 <ContentSection backgroundColor="white">
-  <div class="main-features">
-    <section class="main-feature">
-      <div class="main-feature__icon-header">
-        <img src="/images/icons/github.svg" alt="GitHub" />
-      </div>
-      <h3>Source Code on GitHub</h3>
+  <MainFeatures>
+    <MainFeature title="Source code on GitHub">
+      <img slot="icon" src="/images/icons/github.svg" alt="GitHub" />
       <p>
         You can get all the source code on GitHub, as well as installation instructions. If you
         encounter an issue with this library, this is the place to create an issue.
       </p>
-      <div class="main-feature__actions">
-        <StyledLink href="https://github.com/dropzone/dropzone">GitHub</StyledLink>
-      </div>
-    </section>
-    <section class="main-feature">
-      <div class="main-feature__icon-header">
-        <img src="/images/icons/gitbook.svg" alt="GitBook" />
-      </div>
-      <h3>Documentation</h3>
+      <StyledLink slot="actions" href="https://github.com/dropzone/dropzone">GitHub</StyledLink>
+    </MainFeature>
+    <MainFeature title="Documentation">
+      <img slot="icon" src="/images/icons/gitbook.svg" alt="GitBook" />
       <p>
         All the documentation about Dropzone, and the multiple ways to configure and customise it,
         can be found on GitBook.
       </p>
-      <div class="main-feature__actions">
-        <StyledLink href="https://docs.dropzone.dev">Docs</StyledLink>
-      </div>
-    </section>
-    <section class="main-feature">
-      <div class="main-feature__icon-header">
+      <StyledLink slot="actions" href="https://docs.dropzone.dev">Docs</StyledLink>
+    </MainFeature>
+    <MainFeature title="Questions and Support">
+      <div slot="icon">
         <img src="/images/icons/stackoverflow.svg" alt="Stackoverflow" />
         <span class="plus-icon-container"><IoMdAdd /></span>
         <img src="/images/icons/github.svg" alt="GitHub" />
       </div>
-      <h3>Questions and Support</h3>
       <p>
         If you need help, there are{' '}
         <a href="https://github.com/dropzone/dropzone/discussions"> GitHub Discussions </a>{' '}
         and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people helping you out.
       </p>
-      <div class="main-feature__actions">
-        <StyledLink href="https://stackoverflow.com/questions/tagged/dropzone.js"
-          >Stack Overflow</StyledLink
-        >
-      </div>
-    </section>
-  </div>
+      <StyledLink slot="actions" href="https://stackoverflow.com/questions/tagged/dropzone.js"
+        >Stack Overflow</StyledLink
+      >
+    </MainFeature>
+  </MainFeatures>
 </ContentSection>
 
 <style>
-  .main-features {
-    display: flex;
-    column-gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .main-feature {
-    flex: 1;
-    min-width: 12em;
-    margin-bottom: 1.5rem;
-  }
-  .main-feature__actions {
-    text-align: right;
-  }
-  .main-feature__icon-header {
-    margin-bottom: 1rem;
-  }
   .plus-icon-container {
     display: inline-block;
     width: 2rem;

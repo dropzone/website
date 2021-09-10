@@ -40,7 +40,7 @@
   <FeatureSet>
     <Feature title="Inexpensive">
       <p>
-        Starting at just 4$/month your form data is handled for you. No hidden costs, cancel any
+        Starting at just $4/month your form data is handled for you. No hidden costs, cancel any
         time.
       </p>
     </Feature>
@@ -113,7 +113,7 @@
 
     <Feature title="Inexpensive">
       <p>
-        Starting at just 4$/month your form data is handled for you. No hidden costs, cancel any
+        Starting at just $4/month your form data is handled for you. No hidden costs, cancel any
         time.
       </p>
     </Feature>
