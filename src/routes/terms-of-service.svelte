@@ -7,10 +7,10 @@
   <title>Terms of Service</title>
 </svelte:head>
 
-<Intro title="Terms of Service">
+<Intro title="Terms of Service of Dropzone Plus">
   <p>
-    These terms and conditions outline the rules and regulations for the use of Dropzone's Website,
-    located at https://www.dropzone.dev.
+    These terms and conditions outline the rules and regulations for the use of Dropzone Plus'
+    service, located at https://plus.dropzone.dev.
   </p>
   <p>
     By accessing this website we assume you accept these terms and conditions. Do not continue to
