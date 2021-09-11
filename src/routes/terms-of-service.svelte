@@ -1,13 +1,15 @@
 <script>
   import ContentSection from '$lib/ContentSection.svelte';
   import Intro from '$lib/Intro.svelte';
+  import { defaultSeo, seo } from '$lib/stores';
+
+  $seo = {
+    title: 'Dropzone | Terms of Service',
+    description: defaultSeo.description
+  };
 </script>
 
-<svelte:head>
-  <title>Terms of Service</title>
-</svelte:head>
-
-<Intro title="Terms of Service of Dropzone Plus">
+<Intro title="Terms of Service Dropzone Plus">
   <p>
     These terms and conditions outline the rules and regulations for the use of Dropzone Plus'
     service, located at https://plus.dropzone.dev.

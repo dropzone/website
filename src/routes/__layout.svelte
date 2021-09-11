@@ -10,6 +10,7 @@
 
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
+  import Seo from '$lib/Seo.svelte';
 
   let section;
   let headerImage;
@@ -26,6 +27,8 @@
     new Image().src = '/images/backdrops/js.jpg';
   });
 </script>
+
+<Seo />
 
 <Header --header-backdrop-image={headerImage} />
 

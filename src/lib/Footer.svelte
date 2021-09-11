@@ -3,9 +3,10 @@
 </script>
 
 <footer>
-  <a href="/" class="logo"><InlineSvg src="/images/white_logo.svg" /></a>
-
   <nav>
+    <div class="dropzone-home">
+      <a href="/" class="logo"><InlineSvg src="/images/white_logo.svg" /></a>
+    </div>
     <div class="dropzone-js">
       <h3>Dropzone.js</h3>
       <ul>
@@ -60,10 +61,13 @@
 </footer>
 
 <style>
+  footer :global(svg) {
+    height: 2rem;
+  }
   footer {
     color: var(--title-color);
     text-align: center;
-    margin-top: 12rem;
+    margin-top: 9rem;
     padding: 0 var(--calculated-content-padding) 4rem;
     background: linear-gradient(to bottom, transparent, hsl(225deg 100% 70% / 10%));
   }
@@ -76,7 +80,7 @@
   }
 
   nav {
-    max-width: 40rem;
+    /* max-width: 40rem; */
     margin: 0 auto;
     text-align: left;
     font-size: 0.875rem;
@@ -86,14 +90,18 @@
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
+      'home home'
       'js plus'
       'social legal';
   }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     nav {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: 'js plus social legal';
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 'home js plus social legal';
     }
+  }
+  .dropzone-home {
+    grid-area: home;
   }
   .dropzone-js {
     grid-area: js;

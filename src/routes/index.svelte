@@ -6,11 +6,11 @@
   import FeatureSet from '$lib/FeatureSet.svelte';
   import Feature from '$lib/Feature.svelte';
   import Actions from '$lib/Actions.svelte';
-</script>
 
-<svelte:head>
-  <title>Dropzone</title>
-</svelte:head>
+  import { defaultSeo, seo } from '$lib/stores';
+
+  $seo = defaultSeo;
+</script>
 
 <Intro title="Tools to build great forms">
   <p>

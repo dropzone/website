@@ -7,11 +7,15 @@
   import Heading from '$lib/Heading.svelte';
   import Actions from '$lib/Actions.svelte';
   import PricingPlans from '$lib/PricingPlans.svelte';
-</script>
 
-<svelte:head>
-  <title>Dropzone Plus</title>
-</svelte:head>
+  import { seo } from '$lib/stores';
+
+  $seo = {
+    title: 'Dropzone Plus',
+    description:
+      'Dropzone Plus is a service that handles your form uploades. It not only handles the data but can also handle submitted files.'
+  };
+</script>
 
 <Intro title="We handle your forms">
   <p>

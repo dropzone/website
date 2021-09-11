@@ -9,11 +9,15 @@
   import MainFeatures from '$lib/MainFeatures.svelte';
   import MainFeature from '$lib/MainFeature.svelte';
   import CheckList from '$lib/CheckList.svelte';
-</script>
 
-<svelte:head>
-  <title>Dropzone.js</title>
-</svelte:head>
+  import { seo } from '$lib/stores';
+
+  $seo = {
+    title: 'Dropzone.js',
+    description:
+      "Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
+  };
+</script>
 
 <Intro title="File uploads made easy">
   <p>

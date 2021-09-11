@@ -1,11 +1,14 @@
 <script>
   import ContentSection from '$lib/ContentSection.svelte';
   import Intro from '$lib/Intro.svelte';
-</script>
 
-<svelte:head>
-  <title>Privacy Policy</title>
-</svelte:head>
+  import { defaultSeo, seo } from '$lib/stores';
+
+  $seo = {
+    title: 'Dropzone | Privacy Policy',
+    description: defaultSeo.description
+  };
+</script>
 
 <Intro title="Privacy Policy for Dropzone">
   <p>
