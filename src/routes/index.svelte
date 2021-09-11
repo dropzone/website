@@ -6,11 +6,10 @@
   import FeatureSet from '$lib/FeatureSet.svelte';
   import Feature from '$lib/Feature.svelte';
   import Actions from '$lib/Actions.svelte';
-
-  import { defaultSeo, seo } from '$lib/stores';
-
-  $seo = defaultSeo;
+  import Seo from '$lib/Seo.svelte';
 </script>
+
+<Seo />
 
 <Intro title="Tools to build great forms">
   <p>

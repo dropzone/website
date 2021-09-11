@@ -1,13 +1,14 @@
 <script>
-  import { seo } from '$lib/stores';
+  export let title = 'Dropzone';
+  export let description = 'Tools to build great forms.';
 </script>
 
 <svelte:head>
-  <title>{$seo.title}</title>
-  <meta name="description" content={$seo.description} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
-  <meta property="og:title" content={$seo.title} />
-  <meta property="og:description" content={$seo.description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="/images/opengraph.jpg" />
 
   <meta

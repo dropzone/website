@@ -1,23 +1,21 @@
 <script>
-  import Intro from '$lib/Intro.svelte';
-  import StyledLink from '$lib/StyledLink.svelte';
-  import ContentSection from '$lib/ContentSection.svelte';
-  import Heading from '$lib/Heading.svelte';
   import Actions from '$lib/Actions.svelte';
-  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte';
-  import Dropzone from '$lib/Dropzone.svelte';
-  import MainFeatures from '$lib/MainFeatures.svelte';
-  import MainFeature from '$lib/MainFeature.svelte';
   import CheckList from '$lib/CheckList.svelte';
-
-  import { seo } from '$lib/stores';
-
-  $seo = {
-    title: 'Dropzone.js',
-    description:
-      "Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
-  };
+  import ContentSection from '$lib/ContentSection.svelte';
+  import Dropzone from '$lib/Dropzone.svelte';
+  import Heading from '$lib/Heading.svelte';
+  import Intro from '$lib/Intro.svelte';
+  import MainFeature from '$lib/MainFeature.svelte';
+  import MainFeatures from '$lib/MainFeatures.svelte';
+  import Seo from '$lib/Seo.svelte';
+  import StyledLink from '$lib/StyledLink.svelte';
+  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte';
 </script>
+
+<Seo
+  title="Dropzone.js"
+  description="Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
+/>
 
 <Intro title="File uploads made easy">
   <p>

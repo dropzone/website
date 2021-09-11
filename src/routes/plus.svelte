@@ -1,21 +1,18 @@
 <script>
-  import Intro from '$lib/Intro.svelte';
-  import StyledLink from '$lib/StyledLink.svelte';
-  import ContentSection from '$lib/ContentSection.svelte';
-  import MainFeatures from '$lib/MainFeatures.svelte';
-  import MainFeature from '$lib/MainFeature.svelte';
-  import Heading from '$lib/Heading.svelte';
   import Actions from '$lib/Actions.svelte';
+  import ContentSection from '$lib/ContentSection.svelte';
+  import Intro from '$lib/Intro.svelte';
+  import MainFeature from '$lib/MainFeature.svelte';
+  import MainFeatures from '$lib/MainFeatures.svelte';
   import PricingPlans from '$lib/PricingPlans.svelte';
-
-  import { seo } from '$lib/stores';
-
-  $seo = {
-    title: 'Dropzone Plus',
-    description:
-      'Dropzone Plus is a service that handles your form uploades. It not only handles the data but can also handle submitted files.'
-  };
+  import Seo from '$lib/Seo.svelte';
+  import StyledLink from '$lib/StyledLink.svelte';
 </script>
+
+<Seo
+  title="Dropzone Plus"
+  description="Dropzone Plus is a service that handles your form uploades. It not only handles the data but can also handle submitted files."
+/>
 
 <Intro title="We handle your forms">
   <p>
