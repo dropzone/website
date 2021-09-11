@@ -1,16 +1,13 @@
 <script lang="ts">
+  import { page } from '$app/stores';
+  import Footer from '$lib/Footer.svelte';
   import Header from '$lib/Header/index.svelte';
-  import '../style/reset.css';
-  import '../style/fonts.css';
   import '@fontsource/heebo/400.css';
   import '@fontsource/heebo/700.css';
-
-  import '../style/app.css';
-  import Footer from '$lib/Footer.svelte';
-
-  import { page } from '$app/stores';
   import { onMount } from 'svelte';
-  import Seo from '$lib/Seo.svelte';
+  import '../style/app.css';
+  import '../style/fonts.css';
+  import '../style/reset.css';
 
   let section;
   let headerImage;
@@ -27,8 +24,6 @@
     new Image().src = '/images/backdrops/js.jpg';
   });
 </script>
-
-<Seo />
 
 <Header --header-backdrop-image={headerImage} />
 
