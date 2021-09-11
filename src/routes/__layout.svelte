@@ -1,13 +1,14 @@
 <script lang="ts">
+  import '../style/reset.css';
+  import '../style/fonts.css';
+  import '../style/app.css';
+
   import { page } from '$app/stores';
   import Footer from '$lib/Footer.svelte';
   import Header from '$lib/Header/index.svelte';
   import '@fontsource/heebo/400.css';
   import '@fontsource/heebo/700.css';
   import { onMount } from 'svelte';
-  import '../style/app.css';
-  import '../style/fonts.css';
-  import '../style/reset.css';
 
   let section;
   let headerImage;
