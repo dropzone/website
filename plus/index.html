@@ -14,31 +14,23 @@
 
     <link rel="manifest" href="manifest.webmanifest" />
 
-    <meta property="og:title" content="Dropzone" />
-    <meta property="og:description" content="Tools to build great forms." />
-    <meta property="og:image" content="/images/opengraph.jpg" />
-
-    <title>Dropzone</title>
-    <meta name="description" content="Tools to build great forms" />
-
-    <link href="https://unpkg.com/dropzone@^5/dist/min/dropzone.min.css" rel="stylesheet" />
-
-    <title>Dropzone Plus</title>
+    <title>Dropzone.js</title><meta name="description" content="Dropzone.js is an open source library that provides beautiful and easy to use drag&#39;n&#39;drop file uploads with image previews." data-svelte="svelte-13c0i4w"><meta property="og:title" content="Dropzone.js" data-svelte="svelte-13c0i4w"><meta property="og:description" content="Dropzone.js is an open source library that provides beautiful and easy to use drag&#39;n&#39;drop file uploads with image previews." data-svelte="svelte-13c0i4w"><meta property="og:image" content="/images/opengraph.jpg" data-svelte="svelte-13c0i4w"><meta name="keywords" value="javascript dragndrop drag and drop drag'n'drop file upload image preview" data-svelte="svelte-13c0i4w">
 
 		
 
-		<link rel="modulepreload" href="/_app/start-1f7079a7.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-38c0e622.js">
+		<link rel="modulepreload" href="/_app/start-cda3bea6.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-93f52161.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-db759da6.js">
-		<link rel="modulepreload" href="/_app/chunks/StyledLink-846dd209.js">
-		<link rel="modulepreload" href="/_app/pages/plus.svelte-23eb623f.js">
-		<link rel="modulepreload" href="/_app/chunks/ContentSection-07dc907e.js">
-		<link rel="modulepreload" href="/_app/chunks/MainFeature-59185496.js">
-		<link rel="modulepreload" href="/_app/chunks/Actions-bcd3ba6f.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-ae482a9a.js">
+		<link rel="modulepreload" href="/_app/chunks/StyledLink-c0efb0b5.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-738ff6d7.js">
+		<link rel="modulepreload" href="/_app/pages/plus.svelte-a2d129b6.js">
+		<link rel="modulepreload" href="/_app/chunks/ContentSection-6a7137d4.js">
+		<link rel="modulepreload" href="/_app/chunks/MainFeature-f0354bba.js">
+		<link rel="modulepreload" href="/_app/chunks/Actions-dffb47fb.js">
 		<link rel="stylesheet" href="/_app/assets/start-fcddce2f.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-f1cf73fb.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-50905a66.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-8a4eb6a7.css">
 		<link rel="stylesheet" href="/_app/assets/StyledLink-507b8c49.css">
 		<link rel="stylesheet" href="/_app/assets/pages/plus.svelte-7b77faec.css">
 		<link rel="stylesheet" href="/_app/assets/ContentSection-13391114.css">
@@ -46,7 +38,7 @@
 		<link rel="stylesheet" href="/_app/assets/Actions-85c640ab.css">
 
 		<script type="module">
-			import { start } from "/_app/start-1f7079a7.js";
+			import { start } from "/_app/start-cda3bea6.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -59,8 +51,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-db759da6.js"),
-						import("/_app/pages/plus.svelte-23eb623f.js")
+						import("/_app/pages/__layout.svelte-ae482a9a.js"),
+						import("/_app/pages/plus.svelte-a2d129b6.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -71,6 +63,8 @@
 				}
 			});
 		</script>
+
+    <link href="https://unpkg.com/dropzone@^5/dist/min/dropzone.min.css" rel="stylesheet" />
 
     <script defer data-domain="dropzone.dev" src="https://plausible.io/js/plausible.js"></script>
     <script>
@@ -83,6 +77,8 @@
   </head>
   <body>
     <div id="svelte">
+
+
 
 
 <div style="display: contents; --header-backdrop-image:url(/images/backdrops/plus.jpg);"><div class="backdrop svelte-3wiu7x"></div>
@@ -126,9 +122,7 @@
 </nav></div>
 </header></div>
 
-<main class="svelte-urlf0v">
-
-<section class="wrapper svelte-3d93pn"><div class="title-section svelte-3d93pn"><h1 class="svelte-3d93pn">We handle your forms</h1>
+<main class="svelte-urlf0v"><section class="wrapper svelte-3d93pn"><div class="title-section svelte-3d93pn"><h1 class="svelte-3d93pn">We handle your forms</h1>
 
     <p>Instead of writing your own server logic to handle the submitted data of your forms, use <strong>Dropzone Plus</strong> to handle it for you.
   </p>
@@ -236,22 +230,21 @@
         </p></div></div></div>
 </section></main>
 
-<footer class="svelte-1ur9l14"><a href="/" class="logo svelte-1ur9l14"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a>
-
-  <nav class="svelte-1ur9l14"><div class="dropzone-js svelte-1ur9l14"><h3 class="svelte-1ur9l14">Dropzone.js</h3>
-      <ul><li class="svelte-1ur9l14"><a sveltekit:prefetch href="/js" class="svelte-1ur9l14">Overview</a></li>
-        <li class="svelte-1ur9l14"><a class="secondary svelte-1ur9l14" href="https://docs.dropzone.dev">Documentation</a></li>
-        <li class="svelte-1ur9l14"><a class="secondary svelte-1ur9l14" href="https://github.com/dropzone/dropzone">GitHub</a></li></ul></div>
-    <div class="dropzone-plus svelte-1ur9l14"><h3 class="svelte-1ur9l14">Dropzone Plus</h3>
-      <ul><li class="svelte-1ur9l14"><a sveltekit:prefetch href="/plus" class="svelte-1ur9l14">Overview</a></li>
-        <li class="svelte-1ur9l14"><a class="secondary svelte-1ur9l14" href="https://docs-plus.dropzone.dev">Documentation</a></li>
-        <li class="svelte-1ur9l14"><a class="secondary svelte-1ur9l14" href="https://plus.dropzone.dev">Dashboard</a></li></ul></div>
-    <div class="social svelte-1ur9l14"><h3 class="svelte-1ur9l14">Social</h3>
-      <ul><li class="svelte-1ur9l14"><a href="https://twitter.com/dropzonedev" class="svelte-1ur9l14">Twitter</a></li>
-        <li class="svelte-1ur9l14"><a href="https://blog.dropzone.dev" class="svelte-1ur9l14">Blog</a></li></ul></div>
-    <div class="legal svelte-1ur9l14"><h3 class="svelte-1ur9l14">Legal</h3>
-      <ul><li class="svelte-1ur9l14"><a sveltekit:prefetch href="/terms-of-service" class="svelte-1ur9l14">Terms of Service</a></li>
-        <li class="svelte-1ur9l14"><a sveltekit:prefetch href="/privacy" class="svelte-1ur9l14">Privacy Policy</a></li></ul></div></nav>
+<footer class="svelte-otx8tu"><nav class="svelte-otx8tu"><div class="dropzone-home svelte-otx8tu"><a href="/" class="logo svelte-otx8tu"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a></div>
+    <div class="dropzone-js svelte-otx8tu"><h3 class="svelte-otx8tu">Dropzone.js</h3>
+      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/js" class="svelte-otx8tu">Overview</a></li>
+        <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://docs.dropzone.dev">Documentation</a></li>
+        <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://github.com/dropzone/dropzone">GitHub</a></li></ul></div>
+    <div class="dropzone-plus svelte-otx8tu"><h3 class="svelte-otx8tu">Dropzone Plus</h3>
+      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/plus" class="svelte-otx8tu">Overview</a></li>
+        <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://docs-plus.dropzone.dev">Documentation</a></li>
+        <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://plus.dropzone.dev">Dashboard</a></li></ul></div>
+    <div class="social svelte-otx8tu"><h3 class="svelte-otx8tu">Social</h3>
+      <ul><li class="svelte-otx8tu"><a href="https://twitter.com/dropzonedev" class="svelte-otx8tu">Twitter</a></li>
+        <li class="svelte-otx8tu"><a href="https://blog.dropzone.dev" class="svelte-otx8tu">Blog</a></li></ul></div>
+    <div class="legal svelte-otx8tu"><h3 class="svelte-otx8tu">Legal</h3>
+      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/terms-of-service" class="svelte-otx8tu">Terms of Service</a></li>
+        <li class="svelte-otx8tu"><a sveltekit:prefetch href="/privacy" class="svelte-otx8tu">Privacy Policy</a></li></ul></div></nav>
 </footer>
 
 
