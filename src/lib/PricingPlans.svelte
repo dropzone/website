@@ -11,7 +11,7 @@
     </ul>
     <div class="price">
       <span class="price__number">$4</span>
-      <small>per month</small>
+      <small>net per month</small>
     </div>
   </div>
   <div class="plan plan--plus">
@@ -25,7 +25,7 @@
     </ul>
     <div class="price">
       <span class="price__number">$10</span>
-      <small>per month</small>
+      <small>net per month</small>
     </div>
   </div>
   <div class="plan plan--premium">
@@ -37,7 +37,7 @@
     </ul>
     <div class="price">
       <span class="price__number">$16</span>
-      <small>per month</small>
+      <small>net per month</small>
     </div>
   </div>
 </div>
@@ -89,6 +89,7 @@
 
   .price {
     margin-top: 2rem;
+    text-align: center;
   }
   .price__number {
     font-family: var(--font-header);
@@ -97,8 +98,8 @@
     color: black;
   }
   .price small {
-    font-size: inherit;
-    text-align: center;
+    font-size: 0.875rem;
     display: block;
+    text-align: center;
   }
 </style>
