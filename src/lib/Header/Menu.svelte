@@ -17,7 +17,7 @@
   <div class="menu__main">
     <a
       sveltekit:prefetch
-      href="/js"
+      href="/js/"
       class:link--active={section === 'js'}
       class="link link--pill link--with-docs"
       >Dropzone.js
@@ -28,7 +28,7 @@
     </a>
     <a
       sveltekit:prefetch
-      href="/plus"
+      href="/plus/"
       class:link--active={section === 'plus'}
       class="link link--pill link--with-docs"
       >Dropzone Plus

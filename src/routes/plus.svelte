@@ -47,7 +47,7 @@
       </p>
 
       <p>
-        It works well with <a href="/js">Dropzone.js</a> but you can use any other JavaScript library
+        It works well with <a href="/js/">Dropzone.js</a> but you can use any other JavaScript library
         to submit your files.
       </p>
       <StyledLink slot="actions" href="https://docs-plus.dropzone.dev/how-to-submit-data"

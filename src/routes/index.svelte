@@ -23,8 +23,8 @@
   </p>
 
   <Actions>
-    <StyledLink href="/plus" color="secondary">Dropzone Plus</StyledLink>
-    <StyledLink href="/js" color="secondary" variant="text">Dropzone.js</StyledLink>
+    <StyledLink href="/plus/" color="secondary">Dropzone Plus</StyledLink>
+    <StyledLink href="/js/" color="secondary" variant="text">Dropzone.js</StyledLink>
   </Actions>
 
   <div slot="visual" class="visual">
@@ -84,7 +84,7 @@
   </FeatureSet>
 
   <Actions>
-    <StyledLink href="/js" color="primary">Learn more</StyledLink>
+    <StyledLink href="/js/" color="primary">Learn more</StyledLink>
     <StyledLink href="https://docs.dropzone.dev" color="primary" variant="text"
       >Documentation</StyledLink
     >
@@ -125,7 +125,7 @@
         <StyledLink href="https://plus.dropzone.dev/register" color="primary"
           >Create account</StyledLink
         >
-        <StyledLink href="/plus" color="primary" variant="text">Learn more</StyledLink>
+        <StyledLink href="/plus/" color="primary" variant="text">Learn more</StyledLink>
       </Actions>
     </div>
     <div class="dropzone-plus__visual">

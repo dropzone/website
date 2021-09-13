@@ -11,7 +11,7 @@
       <h3>Dropzone.js</h3>
       <ul>
         <li>
-          <a sveltekit:prefetch href="/js">Overview</a>
+          <a sveltekit:prefetch href="/js/">Overview</a>
         </li>
         <li>
           <a class="secondary" href="https://docs.dropzone.dev">Documentation</a>
@@ -25,7 +25,7 @@
       <h3>Dropzone Plus</h3>
       <ul>
         <li>
-          <a sveltekit:prefetch href="/plus">Overview</a>
+          <a sveltekit:prefetch href="/plus/">Overview</a>
         </li>
         <li>
           <a class="secondary" href="https://docs-plus.dropzone.dev">Documentation</a>

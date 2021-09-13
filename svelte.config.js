@@ -20,6 +20,7 @@ const config = {
   kit: {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
+    trailingSlash: 'always',
     adapter: adapter({
       // default options are shown
       pages: 'build',
