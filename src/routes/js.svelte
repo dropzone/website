@@ -128,6 +128,18 @@
   </div>
 </ContentSection>
 
+<ContentSection backgroundColor="white">
+  <Heading subtitle="Dropzone Plus">Need a server?</Heading>
+  <p>
+    Instead of implementing your own server logic, use <strong>Dropzone Plus</strong>!<br /> Create an
+    account in a few minutes and you’re ready to collect your form data (including files).
+  </p>
+  <Actions>
+    <StyledLink href="https://plus.dropzone.dev" color="secondary">Try for free</StyledLink>
+    <StyledLink href="/plus/" color="secondary" variant="text">Learn more</StyledLink>
+  </Actions>
+</ContentSection>
+
 <style>
   .plus-icon-container {
     display: inline-block;
