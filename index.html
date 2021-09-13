@@ -10,20 +10,20 @@
     <meta name="apple-mobile-web-app-title" content="client" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <title>Dropzone</title><meta name="description" content="Tools to build great forms." data-svelte="svelte-pv2dzu"><meta property="og:title" content="Dropzone" data-svelte="svelte-pv2dzu"><meta property="og:description" content="Tools to build great forms." data-svelte="svelte-pv2dzu"><meta property="og:image" content="/images/opengraph.jpg" data-svelte="svelte-pv2dzu"><meta property="twitter:card" content="summary_large_image" data-svelte="svelte-pv2dzu"><meta property="twitter:title" content="Dropzone" data-svelte="svelte-pv2dzu"><meta property="twitter:description" content="Tools to build great forms." data-svelte="svelte-pv2dzu"><meta property="twitter:image" content="/images/opengraph.jpg" data-svelte="svelte-pv2dzu"><meta name="keywords" value="javascript dragndrop drag and drop drag'n'drop file upload image preview" data-svelte="svelte-pv2dzu">
 
 		
 
-		<link rel="modulepreload" href="/_app/start-3b58a7c1.js">
+		<link rel="modulepreload" href="/_app/start-bf69ecb4.js">
 		<link rel="modulepreload" href="/_app/chunks/vendor-c20315bf.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-8a732884.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-56cbd5f8.js">
 		<link rel="modulepreload" href="/_app/chunks/StyledLink-c95a8cbf.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-27856368.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-111cc00e.js">
 		<link rel="modulepreload" href="/_app/chunks/Seo-ff27434d.js">
 		<link rel="modulepreload" href="/_app/chunks/Heading-ed3ff148.js">
 		<link rel="modulepreload" href="/_app/chunks/Actions-60f14e5a.js">
@@ -37,7 +37,7 @@
 		<link rel="stylesheet" href="/_app/assets/Actions-cea582c9.css">
 
 		<script type="module">
-			import { start } from "/_app/start-3b58a7c1.js";
+			import { start } from "/_app/start-bf69ecb4.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},
@@ -45,13 +45,13 @@
 				host: location.host,
 				route: true,
 				spa: false,
-				trailing_slash: "never",
+				trailing_slash: "always",
 				hydrate: {
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-8a732884.js"),
-						import("/_app/pages/index.svelte-27856368.js")
+						import("/_app/pages/__layout.svelte-56cbd5f8.js"),
+						import("/_app/pages/index.svelte-111cc00e.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -82,10 +82,10 @@
 
 <header class="svelte-3wiu7x"><div class="menu svelte-3wiu7x"><nav class="svelte-1po36w9  desktop"><a class="link svelte-1po36w9" href="/"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a>
 
-  <div class="menu__main svelte-1po36w9"><a sveltekit:prefetch href="/js" class="link link--pill link--with-docs svelte-1po36w9">Dropzone.js
+  <div class="menu__main svelte-1po36w9"><a sveltekit:prefetch href="/js/" class="link link--pill link--with-docs svelte-1po36w9">Dropzone.js
 
       <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs svelte-1po36w9"><span class="link__icon svelte-1po36w9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svelte-3h8371"><path d="M426.2 80.4l-170.2 32-170.2-32C64 77 48 97.3 48 118v244.5c0 20.7 16 32.6 37.8 37.6L256 432l170.2-32c21.8-5 37.8-16.9 37.8-37.6V118c0-20.7-16-41-37.8-37.6zm0 282l-151.2 32V149.9l151.2-32v244.5zm-189.2 32l-151.2-32V118L237 150v244.4z"></path></svg></span></a></a>
-    <a sveltekit:prefetch href="/plus" class="link link--pill link--with-docs svelte-1po36w9">Dropzone Plus
+    <a sveltekit:prefetch href="/plus/" class="link link--pill link--with-docs svelte-1po36w9">Dropzone Plus
 
       <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs svelte-1po36w9"><span class="link__icon svelte-1po36w9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svelte-3h8371"><path d="M426.2 80.4l-170.2 32-170.2-32C64 77 48 97.3 48 118v244.5c0 20.7 16 32.6 37.8 37.6L256 432l170.2-32c21.8-5 37.8-16.9 37.8-37.6V118c0-20.7-16-41-37.8-37.6zm0 282l-151.2 32V149.9l151.2-32v244.5zm-189.2 32l-151.2-32V118L237 150v244.4z"></path></svg></span></a></a></div>
 
@@ -103,10 +103,10 @@
 
   <div style="display: contents; --menu-color:black; --menu-hover-bg-color:rgba(0, 0, 0, 0.1); --menu-border-color:black; --button-contained-background:black; --button-contained-background-hover:rgba(0, 0, 0, 0.8); --color:black;"><nav class="svelte-1po36w9 mobile"><a class="link svelte-1po36w9" href="/"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a>
 
-  <div class="menu__main svelte-1po36w9"><a sveltekit:prefetch href="/js" class="link link--pill link--with-docs svelte-1po36w9">Dropzone.js
+  <div class="menu__main svelte-1po36w9"><a sveltekit:prefetch href="/js/" class="link link--pill link--with-docs svelte-1po36w9">Dropzone.js
 
       <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs svelte-1po36w9"><span class="link__icon svelte-1po36w9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svelte-3h8371"><path d="M426.2 80.4l-170.2 32-170.2-32C64 77 48 97.3 48 118v244.5c0 20.7 16 32.6 37.8 37.6L256 432l170.2-32c21.8-5 37.8-16.9 37.8-37.6V118c0-20.7-16-41-37.8-37.6zm0 282l-151.2 32V149.9l151.2-32v244.5zm-189.2 32l-151.2-32V118L237 150v244.4z"></path></svg></span></a></a>
-    <a sveltekit:prefetch href="/plus" class="link link--pill link--with-docs svelte-1po36w9">Dropzone Plus
+    <a sveltekit:prefetch href="/plus/" class="link link--pill link--with-docs svelte-1po36w9">Dropzone Plus
 
       <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs svelte-1po36w9"><span class="link__icon svelte-1po36w9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svelte-3h8371"><path d="M426.2 80.4l-170.2 32-170.2-32C64 77 48 97.3 48 118v244.5c0 20.7 16 32.6 37.8 37.6L256 432l170.2-32c21.8-5 37.8-16.9 37.8-37.6V118c0-20.7-16-41-37.8-37.6zm0 282l-151.2 32V149.9l151.2-32v244.5zm-189.2 32l-151.2-32V118L237 150v244.4z"></path></svg></span></a></a></div>
 
@@ -131,8 +131,8 @@
     <strong>Dropzone Plus</strong>, a hosted solution that will take care of the data for you.
   </p>
 
-  <div class="actions svelte-g0dxn"><a href="/plus" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-12raq2a outlined">Dropzone Plus <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
-    <a href="/js" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-12raq2a   text">Dropzone.js <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
+  <div class="actions svelte-g0dxn"><a href="/plus/" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-12raq2a outlined">Dropzone Plus <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
+    <a href="/js/" style="--color: var(--secondary-color); --bg-color: var(--secondary-bg-color);" class="svelte-12raq2a   text">Dropzone.js <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
   <div class="visual svelte-3d93pn"><div slot="visual" class="visual svelte-1fvz6d5"><img src="/images/dropzone-grid.png" alt="Dropzone example" class="svelte-1fvz6d5"></div></div>
 </section>
 
@@ -183,7 +183,7 @@
       </p>
 </div></div>
 
-  <div class="actions svelte-g0dxn"><a href="/js" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a outlined">Learn more <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
+  <div class="actions svelte-g0dxn"><a href="/js/" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a outlined">Learn more <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
     <a href="https://docs.dropzone.dev" target="_blank" rel="nofollow" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a   text">Documentation <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div>
 </section>
 
@@ -215,17 +215,17 @@
 </div></div>
 
       <div class="actions svelte-g0dxn"><a href="https://plus.dropzone.dev/register" target="_blank" rel="nofollow" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a outlined">Create account <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a>
-        <a href="/plus" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a   text">Learn more <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
+        <a href="/plus/" style="--color: var(--primary-color); --bg-color: var(--primary-bg-color);" class="svelte-12raq2a   text">Learn more <span class="icon svelte-12raq2a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svelte-3h8371"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></span></a></div></div>
     <div class="dropzone-plus__visual svelte-1fvz6d5"><img src="/images/dropzone_plus.svg" alt="Illustration"></div></div>
 </section></main>
 
 <footer class="svelte-otx8tu"><nav class="svelte-otx8tu"><div class="dropzone-home svelte-otx8tu"><a href="/" class="logo svelte-otx8tu"><svg xmlns="http://www.w3.org/2000/svg" contenteditable="true"></svg></a></div>
     <div class="dropzone-js svelte-otx8tu"><h3 class="svelte-otx8tu">Dropzone.js</h3>
-      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/js" class="svelte-otx8tu">Overview</a></li>
+      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/js/" class="svelte-otx8tu">Overview</a></li>
         <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://docs.dropzone.dev">Documentation</a></li>
         <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://github.com/dropzone/dropzone">GitHub</a></li></ul></div>
     <div class="dropzone-plus svelte-otx8tu"><h3 class="svelte-otx8tu">Dropzone Plus</h3>
-      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/plus" class="svelte-otx8tu">Overview</a></li>
+      <ul><li class="svelte-otx8tu"><a sveltekit:prefetch href="/plus/" class="svelte-otx8tu">Overview</a></li>
         <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://docs-plus.dropzone.dev">Documentation</a></li>
         <li class="svelte-otx8tu"><a class="secondary svelte-otx8tu" href="https://plus.dropzone.dev">Dashboard</a></li></ul></div>
     <div class="social svelte-otx8tu"><h3 class="svelte-otx8tu">Social</h3>
