@@ -1,5 +1,3 @@
 .svelte-kit/**
-static/**
 build/**
 node_modules/**
-!static/bootstrap.html
