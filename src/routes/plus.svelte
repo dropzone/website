@@ -34,7 +34,7 @@
   </Actions>
 
   <div slot="visual" class="visual">
-    <img src="/images/dropzone_plus.svg" alt="Screenshot of dashboard" />
+    <img src="/images/dropzone-plus.png" alt="Dropzone Plus logo" />
   </div>
 </Intro>
 
