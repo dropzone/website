@@ -22,8 +22,8 @@
   </p>
 
   <p>
-    With a few clicks you'll you have a form endpoint that accepts your data and stores it securily
-    — even files.
+    With a few clicks you'll have a form endpoint that accepts your data and stores it securily —
+    even files.
   </p>
 
   <Actions>
