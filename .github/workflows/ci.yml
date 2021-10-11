@@ -8,8 +8,30 @@ on:
     branches: [ main ]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm install
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm install
+          start: npm run dev
+          wait-on: http://localhost:3000
+
   build:
     runs-on: ubuntu-latest
+    needs: [ test ]
+
+    # Only run if actually merged to main
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v2
