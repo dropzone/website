@@ -1,9 +1,9 @@
 <script type="ts">
   import { page } from '$app/stores';
-  import { onMount, onDestroy } from 'svelte';
+  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte';
+  import { onDestroy, onMount } from 'svelte';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
   import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
-  import InlineSvg from 'svelte-inline-svg';
   import Menu from './Menu.svelte';
 
   let isOpen = false;
@@ -22,7 +22,7 @@
 </script>
 
 <div class:hydrated class="mobile-menu">
-  <a href="/"><InlineSvg src="/images/white_logo.svg" /></a>
+  <a href="/"><WhiteLogoSvg /></a>
 
   <button class="toggle" on:click={toggle}><IoMdMenu /></button>
 </div>

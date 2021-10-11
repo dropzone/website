@@ -1,18 +1,18 @@
 <script type="ts">
   import { page } from '$app/stores';
   import StyledLink from '$lib/StyledLink.svelte';
+  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte';
+  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte';
   import LogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
   import LogoTwitter from 'svelte-icons/io/IoLogoTwitter.svelte';
-  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte';
   import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
-  import InlineSvg from 'svelte-inline-svg';
   $: section = $page.path.split('/')[1];
 
   export let mobile = false;
 </script>
 
 <nav class:mobile class:desktop={!mobile}>
-  <a class="link" href="/"><InlineSvg src="/images/white_logo.svg" /></a>
+  <a class="link" href="/"><WhiteLogoSvg /></a>
 
   <div class="menu__main">
     <a

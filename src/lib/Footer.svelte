@@ -1,11 +1,11 @@
 <script>
-  import InlineSvg from 'svelte-inline-svg';
+  import WhiteLogoSvg from './WhiteLogoSvg.svelte';
 </script>
 
 <footer>
   <nav>
     <div class="dropzone-home">
-      <a href="/" class="logo"><InlineSvg src="/images/white_logo.svg" /></a>
+      <a href="/" class="logo"><WhiteLogoSvg /></a>
     </div>
     <div class="dropzone-js">
       <h3>Dropzone.js</h3>
