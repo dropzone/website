@@ -18,6 +18,6 @@
 
   <meta
     name="keywords"
-    value="javascript dragndrop drag and drop drag'n'drop file upload image preview"
+    content="javascript dragndrop drag and drop drag'n'drop file upload image preview"
   />
 </svelte:head>

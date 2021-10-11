@@ -9,7 +9,7 @@
   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
 >
   <g transform="matrix(1,0,0,1,-12239,-4241)">
-    <g id="Artboard5" transform="matrix(0.893051,0,0,32.1655,10118,-29637)">
+    <g transform="matrix(0.893051,0,0,32.1655,10118,-29637)">
       <g transform="matrix(1,0,0,0.392344,-27.9939,639.573)">
         <g transform="matrix(2.45615,0,0,0.173809,-3685.26,813.961)">
           <g transform="matrix(10.0298,0,0,10.0298,2494.06,1393.27)">
