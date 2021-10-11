@@ -1,22 +1,27 @@
 <script type="ts">
   import { page } from '$app/stores';
-  import { onDestroy } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
   import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
   import InlineSvg from 'svelte-inline-svg';
   import Menu from './Menu.svelte';
 
   let isOpen = false;
+  let hydrated = false;
 
   function toggle() {
     isOpen = !isOpen;
   }
 
+  onMount(() => {
+    hydrated = true;
+  });
+
   let unsubscribe = page.subscribe(() => (isOpen = false));
   onDestroy(unsubscribe);
 </script>
 
-<div class="mobile-menu">
+<div class:hydrated class="mobile-menu">
   <a href="/"><InlineSvg src="/images/white_logo.svg" /></a>
 
   <button class="toggle" on:click={toggle}><IoMdMenu /></button>
@@ -65,6 +70,11 @@
   .toggle {
     height: 1.5rem;
     width: 1.5rem;
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+  .hydrated .toggle {
+    opacity: 1;
   }
   nav {
     display: none;

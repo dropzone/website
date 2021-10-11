@@ -16,7 +16,7 @@
     section = $page.path.split('/')[1];
 
     if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`;
-    else headerImage = null;
+    else headerImage = `url(/images/backdrops/default.jpg)`;
   }
 
   onMount(() => {
@@ -28,7 +28,7 @@
 
 <Header --header-backdrop-image={headerImage} />
 
-<main class:white-title={section == 'js'}>
+<main class:white-title={section != 'plus'}>
   <slot />
 </main>
 
