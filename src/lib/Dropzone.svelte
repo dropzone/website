@@ -1,13 +1,12 @@
 <script type="ts">
   // Once the dropzone library is loaded (in the browser) we set the action
   // that is going to be used on the dropzone element.
-  let dropzoneAction: (node: HTMLDivElement) => void;
+  let dropzoneAction: (node: HTMLDivElement) => void
 
-  import loadDropzoneAction from './dropzone-action';
-
-  (async function () {
-    dropzoneAction = await loadDropzoneAction();
-  })();
+  import loadDropzoneAction from './dropzone-action'
+  ;(async function () {
+    dropzoneAction = await loadDropzoneAction()
+  })()
 </script>
 
 <div class="dropzone-container">

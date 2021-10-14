@@ -1,29 +1,29 @@
 <script lang="ts">
-  import '../style/reset.css';
-  import '../style/fonts.css';
-  import '../style/app.css';
+  import '../style/reset.css'
+  import '../style/fonts.css'
+  import '../style/app.css'
 
-  import { page } from '$app/stores';
-  import Footer from '$lib/Footer.svelte';
-  import Header from '$lib/Header/index.svelte';
-  import '@fontsource/heebo/400.css';
-  import '@fontsource/heebo/700.css';
-  import { onMount } from 'svelte';
+  import { page } from '$app/stores'
+  import Footer from '$lib/Footer.svelte'
+  import Header from '$lib/Header/index.svelte'
+  import '@fontsource/heebo/400.css'
+  import '@fontsource/heebo/700.css'
+  import { onMount } from 'svelte'
 
-  let section;
-  let headerImage;
+  let section
+  let headerImage
   $: {
-    section = $page.path.split('/')[1];
+    section = $page.path.split('/')[1]
 
-    if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`;
-    else headerImage = `url(/images/backdrops/default.jpg)`;
+    if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`
+    else headerImage = `url(/images/backdrops/default.jpg)`
   }
 
   onMount(() => {
-    new Image().src = '/images/backdrops/default.jpg';
-    new Image().src = '/images/backdrops/plus.jpg';
-    new Image().src = '/images/backdrops/js.jpg';
-  });
+    new Image().src = '/images/backdrops/default.jpg'
+    new Image().src = '/images/backdrops/plus.jpg'
+    new Image().src = '/images/backdrops/js.jpg'
+  })
 </script>
 
 <Header --header-backdrop-image={headerImage} />

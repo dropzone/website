@@ -1,6 +1,6 @@
 <script type="ts">
-  import Menu from './Menu.svelte';
-  import MobileMenu from './MobileMenu.svelte';
+  import Menu from './Menu.svelte'
+  import MobileMenu from './MobileMenu.svelte'
 </script>
 
 <div class="backdrop" />

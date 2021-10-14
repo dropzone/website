@@ -1,5 +1,5 @@
 <script>
-  export let subtitle = null;
+  export let subtitle = null
 </script>
 
 <h1><slot /></h1>

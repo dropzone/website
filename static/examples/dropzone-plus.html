@@ -43,44 +43,44 @@ is completely optional.
     // The setup of the dropzone when the page loads and Dropzone has
     // initialized.
     init: function () {
-      let button = this.element.querySelector('button[type=submit]');
+      let button = this.element.querySelector('button[type=submit]')
 
       // First change the button to actually tell Dropzone to process the queue.
       button.addEventListener('click', (e) => {
         // Make sure that the form isn't actually being sent.
-        e.preventDefault();
-        e.stopPropagation();
+        e.preventDefault()
+        e.stopPropagation()
         if (this.files.length == 0) {
-          window.alert('You need to add at least one file.');
-          return;
+          window.alert('You need to add at least one file.')
+          return
         }
 
         // This is only added for this demo page. It changes the endpoint URL
         // according to the input field at the bottom.
         // You can just ignore this.
-        let urlInput = document.querySelector('input#url');
-        this.options.url = urlInput.value;
+        let urlInput = document.querySelector('input#url')
+        this.options.url = urlInput.value
         // /\/\/\/\/\/\
 
-        this.processQueue();
-        button.disabled = true;
-      });
+        this.processQueue()
+        button.disabled = true
+      })
 
       this.on('sendingmultiple', function () {
         // Gets triggered when the form is being sent.
         // Hide the submit button or the complete form.
-      });
+      })
       this.on('successmultiple', function (files, response) {
         // Gets triggered when the files have successfully been sent.
         // Redirect user or notify of success.
-        document.querySelector('main').classList.add('sent');
-      });
+        document.querySelector('main').classList.add('sent')
+      })
       this.on('errormultiple', function (files, response) {
         // Gets triggered when there was an error sending the files.
         // Maybe show form again, and notify user of error
-      });
+      })
     }
-  };
+  }
 </script>
 
 <main>
@@ -133,11 +133,11 @@ is completely optional.
 <script>
   // Dropzone Plus specific. This code simply uses the endpoint provided in the
   // URL and fills in the endpoint input field.
-  let urlInput = document.querySelector('input#url');
+  let urlInput = document.querySelector('input#url')
 
-  let endpointMatch = window.location.hash.match(/endpoint=(.*)$/);
+  let endpointMatch = window.location.hash.match(/endpoint=(.*)$/)
   if (endpointMatch) {
-    let endpoint = endpointMatch[1];
-    urlInput.value = endpoint;
+    let endpoint = endpointMatch[1]
+    urlInput.value = endpoint
   }
 </script>

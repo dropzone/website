@@ -1,4 +1,4 @@
-export type breakpointName = 'tiny' | 'small' | 'medium' | 'large' | 'huge';
+export type breakpointName = 'tiny' | 'small' | 'medium' | 'large' | 'huge'
 
 export const breakpointsPixels = {
   tiny: 380,
@@ -6,7 +6,7 @@ export const breakpointsPixels = {
   medium: 1024,
   large: 1200,
   huge: 1600
-};
+}
 
 export const breakpoints = {
   tiny: `@media (min-width: ${breakpointsPixels.tiny}px)`,
@@ -19,4 +19,4 @@ export const breakpoints = {
   largeDown: `@media (max-width: ${breakpointsPixels.large - 1}px)`,
   huge: `@media (min-width: ${breakpointsPixels.huge}px)`,
   hugeDown: `@media (max-width: ${breakpointsPixels.huge - 1}px)`
-};
+}

@@ -1,9 +1,9 @@
 <script type="ts">
-  export let href: string;
-  export let variant: 'outlined' | 'contained' | 'text' = 'outlined';
-  export let color: 'primary' | 'secondary' = 'primary';
+  export let href: string
+  export let variant: 'outlined' | 'contained' | 'text' = 'outlined'
+  export let color: 'primary' | 'secondary' = 'primary'
 
-  import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte';
+  import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte'
 </script>
 
 <a

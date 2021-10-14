@@ -17,31 +17,31 @@ describe('example to-do app', () => {
     // so we must tell it to visit our website with the `cy.visit()` command.
     // Since we want to visit the same URL at the start of all our tests,
     // we include it in our beforeEach function so that it runs before each test
-    cy.visit('http://localhost:3000');
-  });
+    cy.visit('http://localhost:3000')
+  })
 
   it('contains sign in link', () => {
     cy.get('.menu__actions a')
       .contains('Sign in')
       .should('be.visible')
       .should('have.prop', 'href')
-      .and('equal', 'https://plus.dropzone.dev/');
-  });
+      .and('equal', 'https://plus.dropzone.dev/')
+  })
   it('contains sign in link', () => {
-    cy.viewport('iphone-6');
+    cy.viewport('iphone-6')
     cy.get('.menu__actions a')
       .contains('Sign in')
       .should('not.be.visible')
       .should('have.prop', 'href')
-      .and('equal', 'https://plus.dropzone.dev/');
+      .and('equal', 'https://plus.dropzone.dev/')
 
-    cy.wait(100);
-    cy.get('header button.toggle').click();
+    cy.wait(100)
+    cy.get('header button.toggle').click()
 
     cy.get('nav.mobile a')
       .contains('Sign in')
       .should('be.visible')
       .should('have.prop', 'href')
-      .and('equal', 'https://plus.dropzone.dev/');
-  });
-});
+      .and('equal', 'https://plus.dropzone.dev/')
+  })
+})

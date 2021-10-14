@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 module.exports = (opts = {}) => {
   // Work with options here
 
@@ -17,10 +18,10 @@ module.exports = (opts = {}) => {
 
     Declaration: {
       '*': (decl) => {
-        console.log(decl.value);
+        console.log(decl.value)
         // All declarations
       }
     }
-  };
-};
-module.exports.postcss = true;
+  }
+}
+module.exports.postcss = true

@@ -1,5 +1,5 @@
 <script>
-  import WhiteLogoSvg from './WhiteLogoSvg.svelte';
+  import WhiteLogoSvg from './WhiteLogoSvg.svelte'
 </script>
 
 <footer>

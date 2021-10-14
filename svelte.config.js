@@ -1,7 +1,7 @@
-import postcssFunctions from 'postcss-functions';
-import preprocess from 'svelte-preprocess';
-import linearClamp from './postcss-linear-clamp.js';
-import adapter from '@sveltejs/adapter-static';
+import postcssFunctions from 'postcss-functions'
+import preprocess from 'svelte-preprocess'
+import linearClamp from './postcss-linear-clamp.js'
+import adapter from '@sveltejs/adapter-static'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -28,6 +28,6 @@ const config = {
       fallback: null
     })
   }
-};
+}
 
-export default config;
+export default config
