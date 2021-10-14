@@ -63,14 +63,18 @@ jobs:
         # https://docs.cypress.io/guides/guides/parallelization
         #
         # If you don't want to use Cypress Dashboard, remove the matrix.
-        containers: [1, 2]
+        #containers: [1, 2]
+        containers: [1]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
           name: build
+      - run: ls -la
+      - run: ls -la build
       - run: python3 -m http.server --directory build 3000 &
       - run: sleep 5
+      - run: curl http://localhost:3000/index.html
       - run: curl http://localhost:3000/
       - name: Cypress run
         uses: cypress-io/github-action@v2
