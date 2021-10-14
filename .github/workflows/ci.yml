@@ -15,17 +15,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # This action is provided by Cypress.
-      # It installs node and the NPM dependencies, and
-      # caches them.
+      # This action is provided by Cypress. It installs node and the NPM
+      # dependencies, and caches them.
       - name: Cypress install
         uses: cypress-io/github-action@v2
         with:
           # NOTE: we don't actually run tests here!
           runTests: false
 
-      # Now we run our lints. This is the place where you could
-      # run other tests unrelated to cypress (e.g.: unit tests).
+      # Now we run our lints. This is the place where you could run other tests
+      # unrelated to cypress (e.g.: unit tests).
       - name: Run lints
         run: npm run lint
 
@@ -34,8 +33,8 @@ jobs:
       - name: Build site
         run: npm run build
 
-      # And lastly, we upload the generated build/ folder as
-      # artifact so we can use it in later steps.
+      # And lastly, we upload the generated build/ folder as artifact so we can
+      # use it in later steps.
       - name: Upload build and .svelte-kit folder
         uses: actions/upload-artifact@v2
         with:
@@ -48,32 +47,32 @@ jobs:
     needs: build
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    # We need to use the cypress container here, that includes
-    # node, chrome and firefox.
+    # We need to use the cypress container here, that includes chrome and
+    # firefox.
     container:
       image: cypress/browsers:node14.17.0-chrome91-ff89
+      # This is necessary so Cypress can find Firefox.
       options: --user 1001
-    # This whole block is really only for the Cypress dashboard.
-    # It enables parallel tests which only make sense if the
-    # dashboard is coordinating them.
+    # This whole block is really only for the Cypress dashboard. It enables
+    # parallel tests which only make sense if the dashboard is coordinating
+    # them.
     #
-    # If you don't want to use the Cypress Dashboard, just delete
-    # the whole strategy section except the browser matrix.
+    # If you don't want to use the Cypress Dashboard, just delete the whole
+    # strategy section except the browser matrix.
     #
     # Read more about the parallelization here:
     # https://docs.cypress.io/guides/guides/parallelization
     strategy:
-      # When one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving the Dashboard hanging ...
+      # When one test fails, DO NOT cancel the other containers, because this
+      # will kill Cypress processes leaving the Dashboard hanging ...
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
       matrix:
-        # Setting the different browsers we want to test.
-        # This is later used in the cypress action.
+        # Setting the different browsers we want to test. This is later used in
+        # the cypress action.
         browser: [chrome, firefox]
         # Run copies of the current job in parallel.
-        containers: [1]
+        containers: [1, 2]
     steps:
       - uses: actions/checkout@v2
 
@@ -118,8 +117,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # No need to checkout the project, since all we need is to download
-      # the build artifact from the build step.
+      # No need to checkout the project, since all we need is to download the
+      # build artifact from the build step.
       - uses: actions/download-artifact@v2
         with:
           name: build
@@ -132,6 +131,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
-          # Optional. This will create a CNAME file so GitHub Pages
-          # serves it under this domain.
+          # Optional. This will create a CNAME file so GitHub Pages serves it
+          # under this domain.
           cname: www.dropzone.dev
