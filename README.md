@@ -39,7 +39,7 @@ npm run build
 
 ## Testing
 
-Tests are written with Cypress.
+Tests are written with Cypress. Run them like this:
 
 ```bash
 $(npm bin)/cypress open
