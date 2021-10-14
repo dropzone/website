@@ -50,7 +50,9 @@ jobs:
     runs-on: ubuntu-latest
     # We need to use the cypress container here, that includes
     # node, chrome and firefox.
-    container: cypress/browsers:node14.17.0-chrome91-ff89
+    container:
+      image: cypress/browsers:node14.17.0-chrome91-ff89
+      options: --user 1001
     # This whole block is really only for the Cypress dashboard.
     # It enables parallel tests which only make sense if the
     # dashboard is coordinating them.
