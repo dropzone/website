@@ -56,7 +56,7 @@ jobs:
     # dashboard is coordinating them.
     #
     # If you don't want to use the Cypress Dashboard, just delete
-    # the whole strategy section.
+    # the whole strategy section except the browser matrix.
     #
     # Read more about the parallelization here:
     # https://docs.cypress.io/guides/guides/parallelization
@@ -67,7 +67,8 @@ jobs:
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
       matrix:
-        # Each browser we want to test
+        # Setting the different browsers we want to test.
+        # This is later used in the cypress action.
         browser: [chrome, firefox]
         # Run copies of the current job in parallel.
         containers: [1, 2]
@@ -121,7 +122,7 @@ jobs:
         with:
           name: build
           path: build
-      
+
       # This seems to be the simplest way to publish to a separate branch.
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
