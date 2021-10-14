@@ -16,7 +16,9 @@ jobs:
     steps:
       - run: python --version
       - run: python3 --version
-      - run: python3 -m http.server 3000 
+      - run: python3 -m http.server 3000 &
+      - run: sleep 3
+      - run: curl http://localhost:3000
 
   build:
     # We're running on ubuntu-latest, nothing special
