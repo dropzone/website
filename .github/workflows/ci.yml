@@ -70,6 +70,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: build
+          path: build
       - run: ls -la
       - run: ls -la build
       - run: python3 -m http.server --directory build 3000 &
