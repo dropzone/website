@@ -47,7 +47,7 @@ jobs:
       fail-fast: false
       matrix:
         # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
+        containers: [1, 2, 3]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
@@ -63,7 +63,6 @@ jobs:
           record: true
           parallel: true
           group: 'UI - Chrome'
-          spec: cypress/tests/ui/*
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
