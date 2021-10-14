@@ -2,13 +2,8 @@
 
 describe('mobile-menu', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
     cy.viewport('iphone-6')
-    cy.window().then((win) => {
-      win.addEventListener('sveltekit:start', () => {
-        win.document.body.classList.add('hydrated')
-      })
-    })
+    cy.visit('http://localhost:3000')
   })
 
   it('does not contain sign in link', () => {

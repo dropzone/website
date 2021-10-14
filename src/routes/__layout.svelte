@@ -20,6 +20,7 @@
   }
 
   onMount(() => {
+    document.body.classList.add('hydrated')
     new Image().src = '/images/backdrops/default.jpg'
     new Image().src = '/images/backdrops/plus.jpg'
     new Image().src = '/images/backdrops/js.jpg'
