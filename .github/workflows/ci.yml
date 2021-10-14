@@ -70,10 +70,12 @@ jobs:
         with:
           name: build
       - run: python3 -m http.server --directory build 3000 &
+      - run: sleep 5
+      - run: curl http://localhost:3000/
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          wait-on: http://localhost:3000
+          wait-on: http://localhost:3000/
           wait-on-timeout: 10
           browser: chrome
           record: true
