@@ -67,6 +67,8 @@ jobs:
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
       matrix:
+        # Each browser we want to test
+        browser: [chrome, firefox]
         # Run copies of the current job in parallel.
         containers: [1, 2]
     steps:
@@ -89,12 +91,12 @@ jobs:
           # A simple python http server should really never take longer
           # than 10 seconds to start.
           wait-on-timeout: 10
-          browser: chrome
+          browser: ${{ matrix.browser }}
           # All these options are for the Cypress Dashboard.
           # Remove them if you don't want to use it.
           record: true
           parallel: true
-          group: 'UI - Chrome'
+          group: 'UI - ${{ matrix.browser }}'
         # Again, these environment variables are only necessary for the
         # Cypress Dashboard.
         env:
@@ -105,22 +107,28 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
-    runs-on: ubuntu-latest
-    needs: [test]
-
-    # Only run if actually merged to main
+    # Only run if merged to main.
     if: github.ref == 'refs/heads/main'
+    # Only deploy if all tests passed.
+    needs: [build, test]
+
+    runs-on: ubuntu-latest
 
     steps:
+      # No need to checkout the project, since all we need is to download
+      # the build artifact from the build step.
       - uses: actions/download-artifact@v2
         with:
           name: build
           path: build
+      
+      # This seems to be the simplest way to publish to a separate branch.
       - name: Deploy
-        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
+          # Optional. This will create a CNAME file so GitHub Pages
+          # serves it under this domain.
           cname: www.dropzone.dev
