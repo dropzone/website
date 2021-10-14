@@ -1,49 +1,64 @@
-
 name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  test:
+  install:
     runs-on: ubuntu-latest
+    container: cypress/browsers:node14.17.0-chrome88-ff89
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Install NPM dependencies, cache them correctly
+      - name: Cypress install
+        uses: cypress-io/github-action@v2
+        with:
+          runTests: false
+
+      - name: Run lints
+        run: npm run lint
+
+      - name: Save build and .svelte-kit folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          if-no-files-found: error
+          path: |
+            build
+            .svelte-kit
+
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node14.17.0-chrome88-ff89
+    needs: install
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - uses: actions/download-artifact@v2
         with:
-          node-version: '16'
-      - run: npm install
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+          name: build
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm install
-          start: npm run dev
+          start: npm run preview
           wait-on: http://localhost:3000
 
   build:
     runs-on: ubuntu-latest
-    needs: [ test ]
+    needs: [test]
 
     # Only run if actually merged to main
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - uses: actions/download-artifact@v2
         with:
-          node-version: '16'
-
-      - run: npm install
-      - run: npm run build
-
+          name: build
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
