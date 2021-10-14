@@ -1,15 +1,15 @@
 <script>
-  import Actions from '$lib/Actions.svelte';
-  import CheckList from '$lib/CheckList.svelte';
-  import ContentSection from '$lib/ContentSection.svelte';
-  import Dropzone from '$lib/Dropzone.svelte';
-  import Heading from '$lib/Heading.svelte';
-  import Intro from '$lib/Intro.svelte';
-  import MainFeature from '$lib/MainFeature.svelte';
-  import MainFeatures from '$lib/MainFeatures.svelte';
-  import Seo from '$lib/Seo.svelte';
-  import StyledLink from '$lib/StyledLink.svelte';
-  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte';
+  import Actions from '$lib/Actions.svelte'
+  import CheckList from '$lib/CheckList.svelte'
+  import ContentSection from '$lib/ContentSection.svelte'
+  import Dropzone from '$lib/Dropzone.svelte'
+  import Heading from '$lib/Heading.svelte'
+  import Intro from '$lib/Intro.svelte'
+  import MainFeature from '$lib/MainFeature.svelte'
+  import MainFeatures from '$lib/MainFeatures.svelte'
+  import Seo from '$lib/Seo.svelte'
+  import StyledLink from '$lib/StyledLink.svelte'
+  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte'
 </script>
 
 <Seo

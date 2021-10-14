@@ -1,7 +1,7 @@
 <script>
-  export let items;
+  export let items
 
-  import Checkmark from 'svelte-icons/io/IoMdCheckmark.svelte';
+  import Checkmark from 'svelte-icons/io/IoMdCheckmark.svelte'
 </script>
 
 <ul>

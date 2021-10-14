@@ -1,24 +1,24 @@
 <script type="ts">
-  import { page } from '$app/stores';
-  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte';
-  import { onDestroy, onMount } from 'svelte';
-  import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
-  import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
-  import Menu from './Menu.svelte';
+  import { page } from '$app/stores'
+  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
+  import { onDestroy, onMount } from 'svelte'
+  import IoMdClose from 'svelte-icons/io/IoMdClose.svelte'
+  import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte'
+  import Menu from './Menu.svelte'
 
-  let isOpen = false;
-  let hydrated = false;
+  let isOpen = false
+  let hydrated = false
 
   function toggle() {
-    isOpen = !isOpen;
+    isOpen = !isOpen
   }
 
   onMount(() => {
-    hydrated = true;
-  });
+    hydrated = true
+  })
 
-  let unsubscribe = page.subscribe(() => (isOpen = false));
-  onDestroy(unsubscribe);
+  let unsubscribe = page.subscribe(() => (isOpen = false))
+  onDestroy(unsubscribe)
 </script>
 
 <div class:hydrated class="mobile-menu">

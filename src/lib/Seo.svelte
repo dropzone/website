@@ -1,6 +1,6 @@
 <script>
-  export let title = 'Dropzone';
-  export let description = 'Tools to build great forms.';
+  export let title = 'Dropzone'
+  export let description = 'Tools to build great forms.'
 </script>
 
 <svelte:head>

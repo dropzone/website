@@ -1,5 +1,5 @@
 <script>
-  export let backgroundColor = 'transparent';
+  export let backgroundColor = 'transparent'
 </script>
 
 <section class="wrapper">

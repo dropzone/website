@@ -1,7 +1,7 @@
 <script>
-  import ContentSection from '$lib/ContentSection.svelte';
-  import Intro from '$lib/Intro.svelte';
-  import Seo from '$lib/Seo.svelte';
+  import ContentSection from '$lib/ContentSection.svelte'
+  import Intro from '$lib/Intro.svelte'
+  import Seo from '$lib/Seo.svelte'
 </script>
 
 <Seo title="Dropzone | Terms of Service" />

@@ -1,14 +1,14 @@
 <script type="ts">
-  import { page } from '$app/stores';
-  import StyledLink from '$lib/StyledLink.svelte';
-  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte';
-  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte';
-  import LogoGithub from 'svelte-icons/io/IoLogoGithub.svelte';
-  import LogoTwitter from 'svelte-icons/io/IoLogoTwitter.svelte';
-  import IoMdBook from 'svelte-icons/io/IoMdBook.svelte';
-  $: section = $page.path.split('/')[1];
+  import { page } from '$app/stores'
+  import StyledLink from '$lib/StyledLink.svelte'
+  import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
+  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte'
+  import LogoGithub from 'svelte-icons/io/IoLogoGithub.svelte'
+  import LogoTwitter from 'svelte-icons/io/IoLogoTwitter.svelte'
+  import IoMdBook from 'svelte-icons/io/IoMdBook.svelte'
+  $: section = $page.path.split('/')[1]
 
-  export let mobile = false;
+  export let mobile = false
 </script>
 
 <nav class:mobile class:desktop={!mobile}>

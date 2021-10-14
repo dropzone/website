@@ -1,12 +1,12 @@
 <script>
-  import Intro from '$lib/Intro.svelte';
-  import StyledLink from '$lib/StyledLink.svelte';
-  import ContentSection from '$lib/ContentSection.svelte';
-  import Heading from '$lib/Heading.svelte';
-  import FeatureSet from '$lib/FeatureSet.svelte';
-  import Feature from '$lib/Feature.svelte';
-  import Actions from '$lib/Actions.svelte';
-  import Seo from '$lib/Seo.svelte';
+  import Intro from '$lib/Intro.svelte'
+  import StyledLink from '$lib/StyledLink.svelte'
+  import ContentSection from '$lib/ContentSection.svelte'
+  import Heading from '$lib/Heading.svelte'
+  import FeatureSet from '$lib/FeatureSet.svelte'
+  import Feature from '$lib/Feature.svelte'
+  import Actions from '$lib/Actions.svelte'
+  import Seo from '$lib/Seo.svelte'
 </script>
 
 <Seo />

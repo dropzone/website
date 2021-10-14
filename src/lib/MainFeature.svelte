@@ -1,5 +1,5 @@
 <script>
-  export let title;
+  export let title
 </script>
 
 <section class="main-feature">
