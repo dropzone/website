@@ -23,7 +23,10 @@ jobs:
       - name: Run lints
         run: npm run lint
 
-      - name: Save build and .svelte-kit folder
+      - name: Build site
+        run: npm run build
+
+      - name: Upload build and .svelte-kit folder
         uses: actions/upload-artifact@v2
         with:
           name: build
