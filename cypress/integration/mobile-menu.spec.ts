@@ -1,12 +1,13 @@
 /// <reference types="cypress" />
 
-describe('mobile-menu', () => {
+describe('mobile menu', () => {
   beforeEach(() => {
     cy.viewport('iphone-6')
     cy.visit('http://localhost:3000')
   })
 
   it('does not contain sign in link', () => {
+    cy.screenshot()
     cy.get('.menu__actions a').contains('Sign in').should('not.be.visible')
   })
   it('should reveal sign in link when clicking hamburger button', () => {
