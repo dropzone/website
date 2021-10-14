@@ -8,31 +8,40 @@ on:
 
 jobs:
   build:
+    # We're running on ubuntu-latest, nothing special
     runs-on: ubuntu-latest
     steps:
+      # As usual, we simply checkout the project
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Install NPM dependencies, cache them correctly
+      # This action is provided by Cypress.
+      # It installs node and the NPM dependencies, and
+      # caches them.
       - name: Cypress install
         uses: cypress-io/github-action@v2
         with:
+          # NOTE: we don't actually run tests here!
           runTests: false
 
+      # Now we run our lints. This is the place where you could
+      # run other tests unrelated to cypress (e.g.: unit tests).
       - name: Run lints
         run: npm run lint
 
+      # Now we're building the svelte site.
+      # This step generates a build/ directory.
       - name: Build site
         run: npm run build
 
+      # And lastly, we upload the static folders as artifacts
+      # so we can use them in later steps.
       - name: Upload build and .svelte-kit folder
         uses: actions/upload-artifact@v2
         with:
           name: build
           if-no-files-found: error
-          path: |
-            build
-            .svelte-kit
+          path: build
 
   test:
     timeout-minutes: 15
@@ -47,7 +56,7 @@ jobs:
       fail-fast: false
       matrix:
         # run copies of the current job in parallel
-        containers: [1, 2, 3]
+        containers: [1, 2]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
@@ -56,7 +65,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm run preview
+          start: python -m http.server --directory build 3000
           wait-on: http://localhost:3000
           wait-on-timeout: 120
           browser: chrome
