@@ -69,10 +69,10 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: build
+      - run: python3 -m http.server --directory build 3000 &
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: python3 -m http.server --directory build 3000 &
           wait-on: http://localhost:3000
           wait-on-timeout: 10
           browser: chrome
