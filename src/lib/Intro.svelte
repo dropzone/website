@@ -1,8 +1,13 @@
 <script>
+  import Backdrop from './Backdrop.svelte'
+
   export let title
+  export let backgroundImage = '/images/backdrops/default.jpg'
 </script>
 
 <section class="wrapper">
+  <Backdrop {backgroundImage} additionalHeight="var(--header-height)" />
+
   <div class="title-section">
     <h1>{title}</h1>
 
@@ -15,6 +20,7 @@
 
 <style>
   .wrapper {
+    position: relative;
     padding: 4rem var(--calculated-content-padding) 4.5rem;
     display: grid;
     grid-auto-flow: row;
@@ -30,6 +36,7 @@
 
   .title-section {
     max-width: 40rem;
+    color: white;
   }
   h1 {
     font-size: linearClamp(tiny, huge, 3rem, 5rem);

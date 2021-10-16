@@ -1,7 +1,7 @@
 <script type="ts">
   export let href: string
   export let variant: 'outlined' | 'contained' | 'text' = 'outlined'
-  export let color: 'primary' | 'secondary' = 'primary'
+  export let color: 'primary' | 'secondary' | 'white' = 'primary'
 
   import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte'
 </script>
@@ -43,7 +43,6 @@
   .outlined {
     color: var(--color);
     border: 3px solid var(--color);
-    background: white;
   }
   .text {
     color: var(--color);

@@ -1,8 +1,11 @@
 <script>
+  import Backdrop from './Backdrop.svelte'
+
   export let backgroundColor = 'transparent'
 </script>
 
 <section class="wrapper">
+  <Backdrop {backgroundColor} />
   <div class="backdrop" style="background-color: {backgroundColor};" />
   <slot />
 </section>

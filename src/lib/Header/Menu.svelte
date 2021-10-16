@@ -15,33 +15,18 @@
   <a class="link" href="/"><WhiteLogoSvg /></a>
 
   <div class="menu__main">
-    <a
-      sveltekit:prefetch
-      href="/js/"
-      class:link--active={section === 'js'}
-      class="link link--pill link--with-docs"
-      >Dropzone.js
-
-      <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link link--docs">
+    <span class="link link--pill link--with-docs" class:link--active={section === 'js'}>
+      <a sveltekit:prefetch href="/js/" class="link__text">Dropzone.js </a>
+      <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link__docs">
         <span class="link__icon"><IoMdBook /></span>
       </a>
-    </a>
-    <a
-      sveltekit:prefetch
-      href="/plus/"
-      class:link--active={section === 'plus'}
-      class="link link--pill link--with-docs"
-      >Dropzone Plus
-
-      <a
-        href="http://docs-plus.dropzone.dev"
-        target="_blank"
-        rel="nofollow"
-        class="link link--docs"
-      >
+    </span>
+    <span class="link link--pill link--with-docs" class:link--active={section === 'plus'}>
+      <a sveltekit:prefetch href="/plus/" class="link__text">Dropzone Plus </a>
+      <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow" class="link__docs">
         <span class="link__icon"><IoMdBook /></span>
       </a>
-    </a>
+    </span>
   </div>
 
   <div class="menu__actions">
@@ -122,7 +107,7 @@
     padding: 0rem 1rem;
   }
   .link--pill:hover,
-  .link--docs:hover {
+  .link__docs:hover {
     background: var(--menu-hover-bg-color);
   }
   .link--pill.link--active {
@@ -138,22 +123,23 @@
   .link--with-docs {
     padding-right: 0;
   }
-  .link--docs {
-    border-left: 1px solid transparent;
-  }
-  /* .link--active .link--docs {
-    border-left-color: var(--menu-border-color);
-  } */
-  .link--docs {
+  .link__docs {
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
     padding-left: 0.25rem;
     padding-right: 0.75rem;
     margin-left: 0.5rem;
     margin-right: calc(0px - var(--border-width));
+    height: calc(100% + var(--border-width) * 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(0px - var(--border-width));
+    margin-bottom: calc(0px - var(--border-width));
   }
 
   .link__icon {
+    display: block;
     width: var(--icon-size);
     height: var(--icon-size);
   }

@@ -3,8 +3,6 @@
   import MobileMenu from './MobileMenu.svelte'
 </script>
 
-<div class="backdrop" />
-
 <header>
   <div class="menu">
     <Menu />
@@ -19,7 +17,7 @@
     position: relative;
     padding-left: var(--calculated-content-padding);
     padding-right: var(--calculated-content-padding);
-    height: 6rem;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,19 +28,6 @@
     color: white;
 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
-  }
-
-  .backdrop {
-    --height: linearClamp(tiny, large, 17, 18);
-    background-image: var(--header-backdrop-image);
-    background-position: var(--header-backdrop-position);
-    background-size: cover;
-    transform: skew(0deg, var(--backdrop-skew-rotation));
-    position: absolute;
-    bottom: calc(100% - var(--height));
-    left: 0;
-    width: 100%;
-    height: calc(var(--height) + 50vw * var(--backdrop-skew-tan));
   }
 
   .menu,

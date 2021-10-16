@@ -29,7 +29,7 @@
 
 <Header --header-backdrop-image={headerImage} />
 
-<main class:white-title={section != 'plus'}>
+<main>
   <slot />
 </main>
 
@@ -54,6 +54,8 @@
 
     --menu-item-height: 2.25rem;
 
+    --header-height: 6rem;
+
     /* Colors */
     --background-color: #f2f4f6;
 
@@ -63,13 +65,15 @@
     --secondary-color: hsl(239, 100%, 11%);
     --secondary-bg-color: hsla(239, 100%, 11%, 0.05);
 
+    --white-color: hsl(0, 0%, 100%);
+    --white-bg-color: hsla(0, 0%, 100%, 0.05);
+
     --text-color: #4d4d4d;
     --title-color: #000000;
 
-    --intro-title-color: var(--title-color);
+    --intro-title-color: white;
 
-    --header-backdrop-image: url('/images/backdrops/default.jpg');
-    --header-backdrop-position: 'center 0%';
+    --backdrop-position: 'center 0%';
     --backdrop-skew-rotation: -5deg;
     /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */
     --backdrop-skew-tan: 0.08748866353;
@@ -77,8 +81,5 @@
   main {
     position: relative;
     flex: 1;
-  }
-  main.white-title {
-    --intro-title-color: white;
   }
 </style>
