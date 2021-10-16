@@ -23,8 +23,8 @@
   </p>
 
   <Actions>
-    <StyledLink href="/plus/" color="secondary">Dropzone Plus</StyledLink>
-    <StyledLink href="/js/" color="secondary" variant="text">Dropzone.js</StyledLink>
+    <StyledLink href="/plus/" color="white">Dropzone Plus</StyledLink>
+    <StyledLink href="/js/" color="white" variant="text">Dropzone.js</StyledLink>
   </Actions>
 
   <div slot="visual" class="visual">

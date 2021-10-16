@@ -17,7 +17,11 @@
   description="Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
 />
 
-<Intro title="File uploads made easy">
+<Intro
+  title="File uploads made easy"
+  backgroundImage="/images/backdrops/js.jpg"
+  --backdrop-position="right center"
+>
   <p>
     <strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It
     is
@@ -28,10 +32,10 @@
   <p>It's meant to look good by default, and is highly customizable.</p>
 
   <Actions>
-    <StyledLink href="https://docs.dropzone.dev/" color="secondary">Documentation</StyledLink>
+    <StyledLink href="https://docs.dropzone.dev/" color="white">Documentation</StyledLink>
     <StyledLink
       href="https://github.com/dropzone/dropzone/releases/latest/download/dist.zip"
-      color="secondary"
+      color="white"
       variant="text">Download</StyledLink
     >
   </Actions>
