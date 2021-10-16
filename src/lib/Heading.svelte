@@ -20,6 +20,7 @@
     font-weight: bold;
     color: var(--primary-color);
     line-height: 1.5rem;
+    margin-top: 0.75rem;
     margin-bottom: 3rem;
   }
 </style>
