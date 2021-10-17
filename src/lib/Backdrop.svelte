@@ -1,16 +1,18 @@
 <script type="ts">
   export let backgroundImage: string = null
+  export let backgroundImageMobile: string = null
   export let backgroundColor: string = null
   export let additionalHeight: string = null
 
-  let style = backgroundImage
-    ? `background-image: url("${backgroundImage}");`
-    : `background-color: ${backgroundColor};`
-
-  style += `--additional-height: ${additionalHeight};`
+  backgroundImage = backgroundImage ? `url('${backgroundImage}')` : 'none'
+  backgroundImageMobile = backgroundImageMobile ? `url('${backgroundImageMobile}')` : 'none'
 </script>
 
-<div class="backdrop" {style} class:additional-height={additionalHeight != null} />
+<div
+  class="backdrop"
+  class:additional-height={additionalHeight != null}
+  style="--additional-height:{additionalHeight}; --bg-image:{backgroundImage}; --bg-image-mobile:{backgroundImageMobile}; --bg-color:{backgroundColor};"
+/>
 
 <style>
   :global(:root) {
@@ -18,6 +20,9 @@
   }
 
   .backdrop {
+    --bg-image: none;
+    --bg-image-mobile: none;
+    --bg-color: transparent;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -27,6 +32,13 @@
     z-index: -1;
     background-size: cover;
     background-position: var(--backdrop-position);
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+  }
+  @media (max-width: 900px) {
+    .backdrop {
+      background-image: var(--bg-image-mobile);
+    }
   }
   .backdrop.additional-height {
     --height: calc(100% + var(--additional-height));

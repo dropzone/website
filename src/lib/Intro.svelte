@@ -2,11 +2,18 @@
   import Backdrop from './Backdrop.svelte'
 
   export let title
-  export let backgroundImage = '/images/backdrops/default.jpg'
+  export let backgroundImage = 'default'
+
+  let desktopImage = `/images/backdrops/${backgroundImage}.jpg`
+  let mobileImage = `/images/backdrops/${backgroundImage}-mobile.jpg`
 </script>
 
 <section class="wrapper">
-  <Backdrop {backgroundImage} additionalHeight="var(--header-height)" />
+  <Backdrop
+    backgroundImage={desktopImage}
+    backgroundImageMobile={mobileImage}
+    additionalHeight="var(--header-height)"
+  />
 
   <div class="title-section">
     <h1>{title}</h1>

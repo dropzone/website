@@ -14,7 +14,7 @@
   description="Dropzone Plus is a service that handles your form uploades. It not only handles the data but can also handle submitted files."
 />
 
-<Intro title="We handle your forms" backgroundImage="/images/backdrops/plus.jpg">
+<Intro title="We handle your forms" backgroundImage="plus">
   <p>
     Instead of writing your own server logic to handle the submitted data of your forms, use <strong
       >Dropzone Plus</strong

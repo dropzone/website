@@ -73,7 +73,7 @@
 
     --intro-title-color: white;
 
-    --backdrop-position: 'center 0%';
+    --backdrop-position: 'center bottom';
     --backdrop-skew-rotation: -5deg;
     /* https://ddg.gg/?q=tan(5+*+pi+%2F+180)&ia=calculator */
     --backdrop-skew-tan: 0.08748866353;
