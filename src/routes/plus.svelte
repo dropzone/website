@@ -37,7 +37,18 @@
     <img src="/images/dropzone-plus.png" alt="Dropzone Plus logo" />
   </div>
 </Intro>
-
+<ContentSection>
+  <iframe
+    class="yt-video"
+    width="560"
+    height="315"
+    src="https://www.youtube-nocookie.com/embed/8v0jR1WvQyE"
+    title="Dropzone Plus - An introduction"
+    frameborder="0"
+    allow="accelerometer; autoplay=1; showinfo=0; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  />
+</ContentSection>
 <ContentSection backgroundColor="white">
   <MainFeatures>
     <MainFeature title="Works with any form">
@@ -159,5 +170,12 @@
   }
   .question h2 {
     font-weight: bold;
+  }
+
+  .yt-video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: calc((100vw - var(--calculated-content-padding) * 2) / (16 / 9));
   }
 </style>
