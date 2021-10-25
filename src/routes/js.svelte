@@ -30,7 +30,7 @@
   <Actions>
     <StyledLink href="https://docs.dropzone.dev/" color="white">Documentation</StyledLink>
     <StyledLink
-      href="https://github.com/dropzone/dropzone/releases/latest/download/dist.zip"
+      href="https://docs.dropzone.dev/getting-started/installation/stand-alone"
       color="white"
       variant="text">Download</StyledLink
     >
