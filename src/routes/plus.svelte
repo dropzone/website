@@ -10,8 +10,8 @@
 </script>
 
 <Seo
-  title="Dropzone Plus"
-  description="Dropzone Plus is a service that handles your form uploades. It not only handles the data but can also handle submitted files."
+  title="Simple secure form endpoints | Dropzone Plus"
+  description="Discover Dropzone's hassle-free form backend. Add to your forms and start securely collecting data and files in seconds. Get started from just $4/month."
 />
 
 <Intro title="We handle your forms" backgroundImage="plus">
