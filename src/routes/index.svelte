@@ -1,19 +1,20 @@
 <script>
-  import Intro from '$lib/Intro.svelte'
-  import StyledLink from '$lib/StyledLink.svelte'
-  import ContentSection from '$lib/ContentSection.svelte'
-  import Heading from '$lib/Heading.svelte'
-  import FeatureSet from '$lib/FeatureSet.svelte'
-  import Feature from '$lib/Feature.svelte'
   import Actions from '$lib/Actions.svelte'
+  import ContentSection from '$lib/ContentSection.svelte'
+  import { env } from '$lib/env'
+  import Feature from '$lib/Feature.svelte'
+  import FeatureSet from '$lib/FeatureSet.svelte'
+  import Heading from '$lib/Heading.svelte'
+  import Intro from '$lib/Intro.svelte'
   import Seo from '$lib/Seo.svelte'
+  import StyledLink from '$lib/StyledLink.svelte'
 </script>
 
 <Seo />
 
 <Intro title="Tools to build great forms">
   <p>
-    B TESTER ENV: {import.meta.env.VITE_VARIANT}
+    B TESTER ENV: {env.variant}
     Use the free and Open Source JavaScript library <strong>Dropzone.js</strong> to handle drag and dropping
     of files into your form.
   </p>
