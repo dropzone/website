@@ -13,6 +13,8 @@
 
 <Intro title="Tools to build great forms">
   <p>
+    B TESTER
+
     Use the free and Open Source JavaScript library <strong>Dropzone.js</strong> to handle drag and dropping
     of files into your form.
   </p>
