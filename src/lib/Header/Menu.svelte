@@ -1,5 +1,6 @@
 <script type="ts">
   import { page } from '$app/stores'
+  import { events, trackClick } from '$lib/actions/track'
   import StyledLink from '$lib/StyledLink.svelte'
   import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
   import LogoMedium from 'svelte-icons/fa/FaMedium.svelte'
@@ -15,15 +16,31 @@
   <a class="link" href="/"><WhiteLogoSvg /></a>
 
   <div class="menu__main">
-    <span class="link link--pill link--with-docs" class:link--active={section === 'js'}>
+    <span
+      class="link link--pill link--with-docs"
+      class:link--active={section === 'js'}
+    >
       <a sveltekit:prefetch href="/js/" class="link__text">Dropzone.js </a>
-      <a href="http://docs.dropzone.dev" target="_blank" rel="nofollow" class="link__docs">
+      <a
+        href="http://docs.dropzone.dev"
+        target="_blank"
+        rel="nofollow"
+        class="link__docs"
+      >
         <span class="link__icon"><IoMdBook /></span>
       </a>
     </span>
-    <span class="link link--pill link--with-docs" class:link--active={section === 'plus'}>
+    <span
+      class="link link--pill link--with-docs"
+      class:link--active={section === 'plus'}
+    >
       <a sveltekit:prefetch href="/plus/" class="link__text">Dropzone Plus </a>
-      <a href="http://docs-plus.dropzone.dev" target="_blank" rel="nofollow" class="link__docs">
+      <a
+        href="http://docs-plus.dropzone.dev"
+        target="_blank"
+        rel="nofollow"
+        class="link__docs"
+      >
         <span class="link__icon"><IoMdBook /></span>
       </a>
     </span>
@@ -55,7 +72,11 @@
       <span class="link__icon"><LogoMedium /></span>
     </a>
     <span /><!-- spacer -->
-    <StyledLink href="https://plus.dropzone.dev" variant="contained">Sign in</StyledLink>
+    <StyledLink
+      use={[trackClick, events.signIn]}
+      href="https://plus.dropzone.dev"
+      variant="contained">Sign in</StyledLink
+    >
   </div>
 </nav>
 
@@ -115,7 +136,10 @@
   }
 
   .link--icon {
-    padding: 0 calc((var(--menu-item-height) - var(--icon-size)) / 2 - var(--border-width));
+    padding: 0
+      calc(
+        (var(--menu-item-height) - var(--icon-size)) / 2 - var(--border-width)
+      );
   }
   .link--icon:not(:last-child) {
     margin-right: 0.5rem;

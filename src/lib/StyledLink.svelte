@@ -1,19 +1,33 @@
 <script type="ts">
+  import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte'
+  import type { Action } from './actions/type'
+
   export let href: string
   export let variant: 'outlined' | 'contained' | 'text' = 'outlined'
   export let color: 'primary' | 'secondary' | 'white' = 'primary'
+  export let use: ActionSet | undefined = undefined
 
-  import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte'
+  type ActionSet<P extends unknown = unknown> = [Action<P>, P]
+
+  let useFunction: Action = () => undefined
+  let useParam: unknown
+
+  if (use) {
+    useFunction = use[0]
+    useParam = use[1]
+  }
 </script>
 
 <a
+  use:useFunction={useParam}
   {href}
   target={href.startsWith('http') ? '_blank' : null}
   rel={href.startsWith('http') ? 'nofollow' : null}
   style="--color: var(--{color}-color); --bg-color: var(--{color}-bg-color);"
   class:outlined={variant === 'outlined'}
   class:contained={variant === 'contained'}
-  class:text={variant === 'text'}><slot /> <span class="icon"><ChevronRight /></span></a
+  class:text={variant === 'text'}
+  ><slot /> <span class="icon"><ChevronRight /></span></a
 >
 
 <style>

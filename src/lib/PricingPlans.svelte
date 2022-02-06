@@ -1,3 +1,7 @@
+<script>
+  import { events, trackViewed } from '$lib/actions/track'
+</script>
+
 <div class="plans">
   <div class="plan plan--light">
     <h1>Light</h1>
@@ -10,7 +14,9 @@
       <li>No Dropzone branding</li>
     </ul>
     <div class="price">
-      <span class="price__number">$4</span>
+      <span use:trackViewed={events.pricingViewed} class="price__number"
+        >$4</span
+      >
       <small>net per month</small>
     </div>
   </div>
