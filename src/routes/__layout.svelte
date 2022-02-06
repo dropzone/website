@@ -9,6 +9,7 @@
   import '@fontsource/heebo/400.css'
   import '@fontsource/heebo/700.css'
   import { onMount } from 'svelte'
+  import { env } from '$lib/env'
 
   let section
   let headerImage
@@ -30,7 +31,7 @@
 
 <Header --header-backdrop-image={headerImage} />
 
-<main>
+<main data-variant={env.variant}>
   <slot />
 </main>
 

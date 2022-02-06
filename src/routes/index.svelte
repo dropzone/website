@@ -2,7 +2,6 @@
   import Actions from '$lib/Actions.svelte'
   import { events, trackClick, trackViewed } from '$lib/actions/track'
   import ContentSection from '$lib/ContentSection.svelte'
-  import { env } from '$lib/env'
   import Feature from '$lib/Feature.svelte'
   import FeatureSet from '$lib/FeatureSet.svelte'
   import Heading from '$lib/Heading.svelte'
@@ -15,7 +14,6 @@
 
 <Intro title="Tools to build great forms">
   <p>
-    VARIANT: {env.variant}
     Use the free and Open Source JavaScript library <strong>Dropzone.js</strong>
     to handle drag and dropping of files into your form.
   </p>
