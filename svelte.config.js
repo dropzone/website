@@ -11,10 +11,10 @@ const config = {
     postcss: {
       plugins: [
         postcssFunctions({
-          functions: { linearClamp }
-        })
-      ]
-    }
+          functions: { linearClamp },
+        }),
+      ],
+    },
   }),
 
   kit: {
@@ -25,9 +25,9 @@ const config = {
       // default options are shown
       pages: 'build',
       assets: 'build',
-      fallback: null
-    })
-  }
+      fallback: null,
+    }),
+  },
 }
 
 export default config

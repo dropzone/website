@@ -4,12 +4,18 @@ import { browser } from '$app/env'
 import type { Action } from './type'
 
 interface DropzoneWithSubmit extends Dropzone {
-  submitRequest: (xhr: XMLHttpRequest, formData: FormData, files: DropzoneFile[]) => void
+  submitRequest: (
+    xhr: XMLHttpRequest,
+    formData: FormData,
+    files: DropzoneFile[]
+  ) => void
 }
 
 /// If this runs in the browser, this will load the library, and return a Svelte
 /// action that can be used on an element.
-export default async function loadDropzoneAction(): Promise<Action<undefined, HTMLDivElement>> {
+export default async function loadDropzoneAction(): Promise<
+  Action<undefined, HTMLDivElement>
+> {
   if (browser) {
     const pkg = await import('dropzone')
     const Dropzone = pkg.default
@@ -19,7 +25,7 @@ export default async function loadDropzoneAction(): Promise<Action<undefined, HT
       const destroy = setupDropzone(Dropzone, node)
 
       return {
-        destroy: destroy
+        destroy: destroy,
       }
     }
   }
@@ -31,7 +37,7 @@ function setupDropzone(Dropzone, node: HTMLDivElement) {
     url: '/',
     maxFiles: 4,
     parallelUploads: 1,
-    uploadMultiple: false
+    uploadMultiple: false,
   }) as DropzoneWithSubmit
 
   // Prevent more than 4 files to be added.

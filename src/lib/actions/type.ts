@@ -4,5 +4,8 @@ export interface ActionReturn<Parameters = unknown> {
 }
 
 export interface Action<Parameters = unknown, Element = HTMLElement> {
-  <Node extends Element>(node: Node, parameters?: Parameters): void | ActionReturn<Parameters>
+  <Node extends Element>(
+    node: Node,
+    parameters?: Parameters
+  ): void | ActionReturn<Parameters>
 }

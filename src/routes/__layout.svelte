@@ -15,7 +15,8 @@
   $: {
     section = $page.path.split('/')[1]
 
-    if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`
+    if (['js', 'plus'].includes(section))
+      headerImage = `url(/images/backdrops/${section}.jpg)`
     else headerImage = `url(/images/backdrops/default.jpg)`
   }
 

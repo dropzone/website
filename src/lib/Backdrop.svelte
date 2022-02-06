@@ -5,7 +5,9 @@
   export let additionalHeight: string = null
 
   backgroundImage = backgroundImage ? `url('${backgroundImage}')` : 'none'
-  backgroundImageMobile = backgroundImageMobile ? `url('${backgroundImageMobile}')` : 'none'
+  backgroundImageMobile = backgroundImageMobile
+    ? `url('${backgroundImageMobile}')`
+    : 'none'
 </script>
 
 <div
