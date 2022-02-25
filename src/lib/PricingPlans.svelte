@@ -1,3 +1,7 @@
+<script>
+  import { events, trackViewed } from '$lib/actions/track'
+</script>
+
 <div class="plans">
   <div class="plan plan--light">
     <h1>Light</h1>
@@ -10,7 +14,10 @@
       <li>No Dropzone branding</li>
     </ul>
     <div class="price">
-      <span class="price__number">$4</span>
+      <small><strong>30</strong> days <strong>free trial</strong>, then</small>
+      <span use:trackViewed={events.pricingViewed} class="price__number"
+        >$4</span
+      >
       <small>net per month</small>
     </div>
   </div>
@@ -24,6 +31,7 @@
       <li>CSV & JSON export</li>
     </ul>
     <div class="price">
+      <small><strong>30</strong> days <strong>free trial</strong>, then</small>
       <span class="price__number">$10</span>
       <small>net per month</small>
     </div>
@@ -36,6 +44,7 @@
       <li>5GB file storage</li>
     </ul>
     <div class="price">
+      <small><strong>30</strong> days <strong>free trial</strong>, then</small>
       <span class="price__number">$16</span>
       <small>net per month</small>
     </div>

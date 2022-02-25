@@ -14,10 +14,13 @@
           <a sveltekit:prefetch href="/js/">Overview</a>
         </li>
         <li>
-          <a class="secondary" href="https://docs.dropzone.dev">Documentation</a>
+          <a class="secondary" href="https://docs.dropzone.dev">Documentation</a
+          >
         </li>
         <li>
-          <a class="secondary" href="https://github.com/dropzone/dropzone">GitHub</a>
+          <a class="secondary" href="https://github.com/dropzone/dropzone"
+            >GitHub</a
+          >
         </li>
       </ul>
     </div>
@@ -28,7 +31,9 @@
           <a sveltekit:prefetch href="/plus/">Overview</a>
         </li>
         <li>
-          <a class="secondary" href="https://docs-plus.dropzone.dev">Documentation</a>
+          <a class="secondary" href="https://docs-plus.dropzone.dev"
+            >Documentation</a
+          >
         </li>
         <li>
           <a class="secondary" href="https://plus.dropzone.dev">Dashboard</a>
@@ -69,7 +74,11 @@
     text-align: center;
     margin-top: 9rem;
     padding: 0 var(--calculated-content-padding) 4rem;
-    background: linear-gradient(to bottom, transparent, hsl(225deg 100% 70% / 10%));
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsl(225deg 100% 70% / 10%)
+    );
   }
   a {
     color: inherit;

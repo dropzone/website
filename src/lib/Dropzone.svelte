@@ -3,7 +3,7 @@
   // that is going to be used on the dropzone element.
   let dropzoneAction: (node: HTMLDivElement) => void
 
-  import loadDropzoneAction from './dropzone-action'
+  import loadDropzoneAction from './actions/dropzone-action'
   ;(async function () {
     dropzoneAction = await loadDropzoneAction()
   })()

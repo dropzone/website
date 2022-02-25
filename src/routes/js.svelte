@@ -1,5 +1,6 @@
 <script>
   import Actions from '$lib/Actions.svelte'
+  import { events, trackClick, trackViewed } from '$lib/actions/track'
   import CheckList from '$lib/CheckList.svelte'
   import ContentSection from '$lib/ContentSection.svelte'
   import Dropzone from '$lib/Dropzone.svelte'
@@ -19,16 +20,18 @@
 
 <Intro title="File uploads made easy" backgroundImage="js">
   <p>
-    <strong>Dropzone.js</strong> is one of the most popular drag and drop JavaScript libraries. It
-    is
-    <strong>free</strong>, <strong>fully open source</strong>, and makes it easy for you to handle
-    dropped files on your website.
+    <strong>Dropzone.js</strong> is one of the most popular drag and drop
+    JavaScript libraries. It is
+    <strong>free</strong>, <strong>fully open source</strong>, and makes it easy
+    for you to handle dropped files on your website.
   </p>
 
   <p>It's meant to look good by default, and is highly customizable.</p>
 
   <Actions>
-    <StyledLink href="https://docs.dropzone.dev/" color="white">Documentation</StyledLink>
+    <StyledLink href="https://docs.dropzone.dev/" color="white"
+      >Documentation</StyledLink
+    >
     <StyledLink
       href="https://docs.dropzone.dev/getting-started/installation/stand-alone"
       color="white"
@@ -43,18 +46,23 @@
     <MainFeature title="Source code on GitHub">
       <img slot="icon" src="/images/icons/github.svg" alt="GitHub" />
       <p>
-        You can get all the source code on GitHub, as well as installation instructions. If you
-        encounter an issue with this library, this is the place to create an issue.
+        You can get all the source code on GitHub, as well as installation
+        instructions. If you encounter an issue with this library, this is the
+        place to create an issue.
       </p>
-      <StyledLink slot="actions" href="https://github.com/dropzone/dropzone">GitHub</StyledLink>
+      <StyledLink slot="actions" href="https://github.com/dropzone/dropzone"
+        >GitHub</StyledLink
+      >
     </MainFeature>
     <MainFeature title="Documentation">
       <img slot="icon" src="/images/icons/gitbook.svg" alt="GitBook" />
       <p>
-        All the documentation about Dropzone, and the multiple ways to configure and customise it,
-        can be found on GitBook.
+        All the documentation about Dropzone, and the multiple ways to configure
+        and customise it, can be found on GitBook.
       </p>
-      <StyledLink slot="actions" href="https://docs.dropzone.dev">Docs</StyledLink>
+      <StyledLink slot="actions" href="https://docs.dropzone.dev"
+        >Docs</StyledLink
+      >
     </MainFeature>
     <MainFeature title="Questions and Support">
       <div slot="icon">
@@ -64,10 +72,15 @@
       </div>
       <p>
         If you need help, there are{' '}
-        <a href="https://github.com/dropzone/dropzone/discussions"> GitHub Discussions </a>{' '}
-        and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people helping you out.
+        <a href="https://github.com/dropzone/dropzone/discussions">
+          GitHub Discussions
+        </a>{' '}
+        and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people
+        helping you out.
       </p>
-      <StyledLink slot="actions" href="https://stackoverflow.com/questions/tagged/dropzone.js"
+      <StyledLink
+        slot="actions"
+        href="https://stackoverflow.com/questions/tagged/dropzone.js"
         >Stack Overflow</StyledLink
       >
     </MainFeature>
@@ -82,9 +95,9 @@
     <div class="features__description">
       <h2>Built to last</h2>
       <p>
-        Dropzone is a robust library trusted by millions. It started in 2012 with compatibility in
-        mind. Whether your users use an outdated browser, or have JavaScript enabled, Dropzone got
-        you covered.
+        Dropzone is a robust library trusted by millions. It started in 2012
+        with compatibility in mind. Whether your users use an outdated browser,
+        or have JavaScript enabled, Dropzone got you covered.
       </p>
     </div>
     <div class="features__list">
@@ -100,7 +113,7 @@
           'Translation support',
           'jQuery plugin',
           'File queues',
-          'Multiple installation options'
+          'Multiple installation options',
         ]}
       />
     </div>
@@ -109,9 +122,9 @@
     <div class="features__description">
       <h2>Looking good by default</h2>
       <p>
-        One main goal when creating Dropzone was to have file previews that are not only practical,
-        but also look good. That's why the default design of Dropzone looks great without you
-        needing to do anything.
+        One main goal when creating Dropzone was to have file previews that are
+        not only practical, but also look good. That's why the default design of
+        Dropzone looks great without you needing to do anything.
       </p>
     </div>
     <div class="features__list">
@@ -121,7 +134,7 @@
           'Image Previews',
           'Progress Bars',
           'Success & error icons',
-          'Themes'
+          'Themes',
         ]}
       />
     </div>
@@ -131,12 +144,25 @@
 <ContentSection backgroundColor="white">
   <Heading subtitle="Dropzone Plus">Need a server?</Heading>
   <p>
-    Instead of implementing your own server logic, use <strong>Dropzone Plus</strong>!<br /> Create an
-    account in a few minutes and you’re ready to collect your form data (including files).
+    Instead of implementing your own server logic, use <strong
+      >Dropzone Plus</strong
+    >!<br /> Create an account in a few minutes and you’re ready to collect your
+    form data (including files).
   </p>
   <Actions>
-    <StyledLink href="https://plus.dropzone.dev" color="secondary">Try for free</StyledLink>
-    <StyledLink href="/plus/" color="secondary" variant="text">Learn more</StyledLink>
+    <StyledLink
+      use={[trackClick, events.tryPlus]}
+      href="https://plus.dropzone.dev"
+      color="secondary"
+      ><span use:trackViewed={events.plusActionsViewed}>Try for free</span
+      ></StyledLink
+    >
+    <StyledLink
+      use={[trackClick, events.learnMoreAboutPlus]}
+      href="/plus/"
+      color="secondary"
+      variant="text">Learn more</StyledLink
+    >
   </Actions>
 </ContentSection>
 

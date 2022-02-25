@@ -4,7 +4,7 @@ const breakpointsRem = {
   small: 50, // 800px
   medium: 64, // 1024px
   large: 75, // 1200px
-  huge: 100 // 1600px
+  huge: 100, // 1600px
 }
 
 export const linearClamp = (minWidth, maxWidth, minSize, maxSize) => {

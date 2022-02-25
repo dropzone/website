@@ -9,13 +9,15 @@
   import '@fontsource/heebo/400.css'
   import '@fontsource/heebo/700.css'
   import { onMount } from 'svelte'
+  import { env } from '$lib/env'
 
   let section
   let headerImage
   $: {
     section = $page.path.split('/')[1]
 
-    if (['js', 'plus'].includes(section)) headerImage = `url(/images/backdrops/${section}.jpg)`
+    if (['js', 'plus'].includes(section))
+      headerImage = `url(/images/backdrops/${section}.jpg)`
     else headerImage = `url(/images/backdrops/default.jpg)`
   }
 
@@ -29,7 +31,7 @@
 
 <Header --header-backdrop-image={headerImage} />
 
-<main>
+<main data-variant={env.variant}>
   <slot />
 </main>
 

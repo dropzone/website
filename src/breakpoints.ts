@@ -5,7 +5,7 @@ export const breakpointsPixels = {
   small: 800,
   medium: 1024,
   large: 1200,
-  huge: 1600
+  huge: 1600,
 }
 
 export const breakpoints = {
@@ -18,5 +18,5 @@ export const breakpoints = {
   large: `@media (min-width: ${breakpointsPixels.large}px)`,
   largeDown: `@media (max-width: ${breakpointsPixels.large - 1}px)`,
   huge: `@media (min-width: ${breakpointsPixels.huge}px)`,
-  hugeDown: `@media (max-width: ${breakpointsPixels.huge - 1}px)`
+  hugeDown: `@media (max-width: ${breakpointsPixels.huge - 1}px)`,
 }
