@@ -24,11 +24,17 @@
 <div class:hydrated class="mobile-menu">
   <a href="/"><WhiteLogoSvg /></a>
 
-  <button class="toggle" on:click={toggle}><MenuIcon /></button>
+  <button class="toggle" aria-label="Open Menu" on:click={toggle}
+    ><MenuIcon /></button
+  >
 </div>
 
 <nav class:open={isOpen}>
-  <button class="close" on:click={() => (isOpen = false)}><CloseIcon /></button>
+  <button
+    class="close"
+    aria-label="Close Menu"
+    on:click={() => (isOpen = false)}><CloseIcon /></button
+  >
 
   <Menu
     mobile

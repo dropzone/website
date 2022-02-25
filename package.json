@@ -5,6 +5,7 @@
     "dev": "VITE_VARIANT=$BRANCH svelte-kit dev",
     "build": "VITE_VARIANT=$BRANCH svelte-kit build",
     "preview": "svelte-kit preview",
+    "test": "playwright test",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
