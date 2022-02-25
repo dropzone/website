@@ -119,7 +119,7 @@
             doing it.
           </p>
         </Feature>
-        <Feature title="Secure & robust">
+        <Feature title="Secure &amp; robust">
           <p>
             Our servers run on kubernetes clusters and scale to your demand. No
             downtime or slow uploads when you experience user spikes.
