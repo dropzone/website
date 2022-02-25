@@ -11,10 +11,10 @@
   import { onMount } from 'svelte'
   import { env } from '$lib/env'
 
-  let section
-  let headerImage
+  let section: string
+  let headerImage: string
   $: {
-    section = $page.path.split('/')[1]
+    section = $page.url.pathname.split('/')[1]
 
     if (['js', 'plus'].includes(section))
       headerImage = `url(/images/backdrops/${section}.jpg)`

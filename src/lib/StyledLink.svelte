@@ -1,5 +1,5 @@
 <script type="ts">
-  import ChevronRight from 'svelte-icons/fa/FaChevronRight.svelte'
+  import ChevronRight from '~icons/ion/chevron-forward'
   import type { Action } from './actions/type'
 
   export let href: string
@@ -46,12 +46,14 @@
   }
 
   .icon {
-    width: 0.9rem;
-    height: 0.9rem;
     margin-left: 0.2em;
+    margin-right: -0.2em;
   }
   .icon :global(svg) {
     display: block;
+  }
+  .icon :global(svg path) {
+    stroke-width: 5em;
   }
 
   .outlined {

@@ -2,8 +2,8 @@
   import { page } from '$app/stores'
   import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
   import { onDestroy, onMount } from 'svelte'
-  import IoMdClose from 'svelte-icons/io/IoMdClose.svelte'
-  import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte'
+  import CloseIcon from '~icons/ion/close'
+  import MenuIcon from '~icons/ion/menu'
   import Menu from './Menu.svelte'
 
   let isOpen = false
@@ -24,11 +24,11 @@
 <div class:hydrated class="mobile-menu">
   <a href="/"><WhiteLogoSvg /></a>
 
-  <button class="toggle" on:click={toggle}><IoMdMenu /></button>
+  <button class="toggle" on:click={toggle}><MenuIcon /></button>
 </div>
 
 <nav class:open={isOpen}>
-  <button class="close" on:click={() => (isOpen = false)}><IoMdClose /></button>
+  <button class="close" on:click={() => (isOpen = false)}><CloseIcon /></button>
 
   <Menu
     mobile
@@ -70,6 +70,7 @@
   .toggle {
     height: 1.5rem;
     width: 1.5rem;
+    font-size: 1.5em;
     opacity: 0;
     transition: opacity 500ms ease;
   }
@@ -94,6 +95,7 @@
   }
   .close {
     color: black;
+    font-size: 3em;
     height: 3rem;
     width: 3rem;
     position: absolute;

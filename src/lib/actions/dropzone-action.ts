@@ -1,4 +1,5 @@
 import type { DropzoneFile } from 'dropzone'
+import type Dropzone from 'dropzone'
 
 import { browser } from '$app/env'
 import type { Action } from './type'
@@ -32,8 +33,8 @@ export default async function loadDropzoneAction(): Promise<
 }
 
 /// Sets up dropzone, and returns a destroy function.
-function setupDropzone(Dropzone, node: HTMLDivElement) {
-  const dropzone = new Dropzone(node, {
+function setupDropzone(DropzoneClass: typeof Dropzone, node: HTMLDivElement) {
+  const dropzone = new DropzoneClass(node, {
     url: '/',
     maxFiles: 4,
     parallelUploads: 1,
@@ -48,7 +49,7 @@ function setupDropzone(Dropzone, node: HTMLDivElement) {
     }
   }
 
-  const timeouts = []
+  const timeouts: NodeJS.Timeout[] = []
 
   dropzone.submitRequest = (_, __, files) => {
     const steps = 8

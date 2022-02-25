@@ -33,6 +33,9 @@ jobs:
       - name: Run lints
         run: npm run lint
 
+      - name: Run checks
+        run: npm run check
+
       # Now we're building the svelte site.
       # This step generates a build/ directory.
       - name: Build site
