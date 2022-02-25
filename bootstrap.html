@@ -78,7 +78,9 @@
 
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" href="https://www.dropzone.dev">Back to www.dropzone.dev</a>
+          <a class="nav-link" href="https://www.dropzone.dev"
+            >Back to www.dropzone.dev</a
+          >
         </li>
       </ul>
 
@@ -86,10 +88,12 @@
 
       <blockquote>
         <p>
-          This is a bootstrap theme of Dropzone.js with a completely different user experience.<br />
+          This is a bootstrap theme of Dropzone.js with a completely different
+          user experience.<br />
           It is a demonstration of the powerful configuration possibilities of
-          <a href="//www.dropzonejs.com">Dropzone.js</a>. You can make Dropzone.js look exactly how
-          you want it to look and it's very easy to do so.
+          <a href="//www.dropzonejs.com">Dropzone.js</a>. You can make
+          Dropzone.js look exactly how you want it to look and it's very easy to
+          do so.
         </p>
       </blockquote>
 
@@ -144,7 +148,12 @@
           </div>
           <div>
             <p class="size" data-dz-size></p>
-            <div class="progress active" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div
+              class="progress active"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
               <div
                 class="progress-bar progress-bar-striped progress-bar-animated progress-bar-success"
                 style="width: 0%"
@@ -187,7 +196,7 @@
           previewTemplate: previewTemplate,
           autoQueue: false, // Make sure the files aren't queued until manually added
           previewsContainer: '#previews', // Define the container to display the previews
-          clickable: '.fileinput-button' // Define the element that should be used as click trigger to select files.
+          clickable: '.fileinput-button', // Define the element that should be used as click trigger to select files.
         })
 
         myDropzone.on('addedfile', function (file) {
@@ -199,7 +208,8 @@
 
         // Update the total progress bar
         myDropzone.on('totaluploadprogress', function (progress) {
-          document.querySelector('#total-progress .progress-bar').style.width = progress + '%'
+          document.querySelector('#total-progress .progress-bar').style.width =
+            progress + '%'
         })
 
         myDropzone.on('sending', function (file) {
@@ -207,7 +217,9 @@
           // Show the total progress bar when upload starts
           document.querySelector('#total-progress').style.opacity = '1'
           // And disable the start button
-          file.previewElement.querySelector('.start').setAttribute('disabled', 'disabled')
+          file.previewElement
+            .querySelector('.start')
+            .setAttribute('disabled', 'disabled')
         })
 
         // Hide the total progress bar when nothing's uploading anymore
@@ -250,10 +262,15 @@
                     file.upload = {
                       progress: (100 * (step + 1)) / totalSteps,
                       total: file.size,
-                      bytesSent: ((step + 1) * file.size) / totalSteps
+                      bytesSent: ((step + 1) * file.size) / totalSteps,
                     }
 
-                    self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent)
+                    self.emit(
+                      'uploadprogress',
+                      file,
+                      file.upload.progress,
+                      file.upload.bytesSent
+                    )
                     if (file.upload.progress == 100) {
                       file.status = Dropzone.SUCCESS
                       self.emit('success', file, 'success', null)
@@ -276,7 +293,10 @@
         <div class="panel-body">
           <ul>
             <li>No jQuery dependency</li>
-            <li>Extremely easy configuration so it looks exactly how you want it to look</li>
+            <li>
+              Extremely easy configuration so it looks exactly how you want it
+              to look
+            </li>
             <li>Fast fast fast.</li>
           </ul>
         </div>
@@ -288,14 +308,16 @@
 
       <p>
         For a complete understanding of how Dropzone.js works please see the
-        <a href="https://docs.dropzone.dev/configuration/theming">docs for Dropzone theming</a>.
+        <a href="https://docs.dropzone.dev/configuration/theming"
+          >docs for Dropzone theming</a
+        >.
       </p>
 
       <p>
-        Basically Dropzone just does all the heavy lifting for you, and exposes a very high level
-        API that you can use to build your user interface.<br />
-        The main feature of Dropzone is its events that you can listen to, so you can react to every
-        change.
+        Basically Dropzone just does all the heavy lifting for you, and exposes
+        a very high level API that you can use to build your user interface.<br />
+        The main feature of Dropzone is its events that you can listen to, so
+        you can react to every change.
       </p>
 
       <p>This is the HTML that is used as template for every file dropped:</p>
@@ -303,10 +325,10 @@
       <script src="https://gist.github.com/enyo/6ba8ce090590421bf134.js"></script>
 
       <p>
-        As you can see, it's just basic bootstrap HTML that defines how a file should look like. The
-        most important aspect, is that there are
-        <code>data-dz-*</code> markers in the markup, so that Dropzone can update the elements
-        automatically.
+        As you can see, it's just basic bootstrap HTML that defines how a file
+        should look like. The most important aspect, is that there are
+        <code>data-dz-*</code> markers in the markup, so that Dropzone can
+        update the elements automatically.
       </p>
 
       <p>The JavaScript should be self explanatory:</p>
