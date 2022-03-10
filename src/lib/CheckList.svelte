@@ -1,7 +1,7 @@
-<script>
-  export let items
+<script lang="ts">
+  export let items: string[]
 
-  import Checkmark from 'svelte-icons/io/IoMdCheckmark.svelte'
+  import Checkmark from '~icons/ion/md-checkmark'
 </script>
 
 <ul>

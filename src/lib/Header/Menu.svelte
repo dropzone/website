@@ -3,11 +3,13 @@
   import { events, trackClick } from '$lib/actions/track'
   import StyledLink from '$lib/StyledLink.svelte'
   import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
-  import LogoMedium from 'svelte-icons/fa/FaMedium.svelte'
-  import LogoGithub from 'svelte-icons/io/IoLogoGithub.svelte'
-  import LogoTwitter from 'svelte-icons/io/IoLogoTwitter.svelte'
-  import IoMdBook from 'svelte-icons/io/IoMdBook.svelte'
-  $: section = $page.path.split('/')[1]
+
+  import LogoMedium from '~icons/ion/logo-medium'
+  import LogoGithub from '~icons/ion/logo-github'
+  import LogoTwitter from '~icons/ion/logo-twitter'
+  import IoMdBook from '~icons/ion/md-book'
+
+  $: section = $page.url.pathname.split('/')[1]
 
   export let mobile = false
 </script>
@@ -164,6 +166,7 @@
 
   .link__icon {
     display: block;
+    font-size: 1.375em;
     width: var(--icon-size);
     height: var(--icon-size);
   }

@@ -35,6 +35,60 @@
   </div>
 </Intro>
 
+<ContentSection>
+  <div class="dropzone-plus">
+    <div class="dropzone-plus__content">
+      <Heading subtitle="A subscription model for your forms"
+        >Let us take care of processing your forms</Heading
+      >
+      <FeatureSet>
+        <Feature title="Inexpensive">
+          <p>
+            Starting at just $4/month your form data is handled for you. No
+            hidden costs, cancel any time.
+          </p>
+        </Feature>
+        <Feature title="Easy setup">
+          <p>
+            Get started in just a few minutes. You won't even notice you're
+            doing it.
+          </p>
+        </Feature>
+        <Feature title="Secure &amp; robust">
+          <p>
+            Our servers run on kubernetes clusters and scale to your demand. No
+            downtime or slow uploads when you experience user spikes.
+          </p>
+        </Feature>
+        <Feature title="Handle files">
+          <p>
+            Let your users send you files through a form on your website and get
+            a link to them via email or access them in the dashboard.
+          </p>
+        </Feature>
+      </FeatureSet>
+
+      <Actions>
+        <StyledLink
+          use={[trackClick, events.createAccount]}
+          href="https://plus.dropzone.dev/register"
+          color="primary"
+          ><span use:trackViewed={events.plusActionsViewed}>Create account</span
+          ></StyledLink
+        >
+        <StyledLink
+          use={[trackClick, events.learnMoreAboutPlus]}
+          href="/plus/"
+          color="primary"
+          variant="text">Learn more</StyledLink
+        >
+      </Actions>
+    </div>
+    <div class="dropzone-plus__visual">
+      <img src="/images/dropzone-plus.png" alt="Illustration" />
+    </div>
+  </div>
+</ContentSection>
 <ContentSection backgroundColor="white">
   <div class="dropzonejs-heading">
     <div>
@@ -98,61 +152,6 @@
       >Documentation</StyledLink
     >
   </Actions>
-</ContentSection>
-
-<ContentSection>
-  <div class="dropzone-plus">
-    <div class="dropzone-plus__content">
-      <Heading subtitle="A subscription model for your forms"
-        >Let us take care of processing your forms</Heading
-      >
-      <FeatureSet>
-        <Feature title="Inexpensive">
-          <p>
-            Starting at just $4/month your form data is handled for you. No
-            hidden costs, cancel any time.
-          </p>
-        </Feature>
-        <Feature title="Easy setup">
-          <p>
-            Get started in just a few minutes. You won't even notice you're
-            doing it.
-          </p>
-        </Feature>
-        <Feature title="Secure &amp; robust">
-          <p>
-            Our servers run on kubernetes clusters and scale to your demand. No
-            downtime or slow uploads when you experience user spikes.
-          </p>
-        </Feature>
-        <Feature title="Handle files">
-          <p>
-            Let your users send you files through a form on your website and get
-            a link to them via email or access them in the dashboard.
-          </p>
-        </Feature>
-      </FeatureSet>
-
-      <Actions>
-        <StyledLink
-          use={[trackClick, events.createAccount]}
-          href="https://plus.dropzone.dev/register"
-          color="primary"
-          ><span use:trackViewed={events.plusActionsViewed}>Create account</span
-          ></StyledLink
-        >
-        <StyledLink
-          use={[trackClick, events.learnMoreAboutPlus]}
-          href="/plus/"
-          color="primary"
-          variant="text">Learn more</StyledLink
-        >
-      </Actions>
-    </div>
-    <div class="dropzone-plus__visual">
-      <img src="/images/dropzone_plus.svg" alt="Illustration" />
-    </div>
-  </div>
 </ContentSection>
 
 <style>

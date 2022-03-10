@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import Backdrop from './Backdrop.svelte'
 
-  export let title
+  export let title: string
   export let backgroundImage = 'default'
 
   let desktopImage = `/images/backdrops/${backgroundImage}.jpg`

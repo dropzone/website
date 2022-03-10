@@ -10,7 +10,7 @@
   import MainFeatures from '$lib/MainFeatures.svelte'
   import Seo from '$lib/Seo.svelte'
   import StyledLink from '$lib/StyledLink.svelte'
-  import IoMdAdd from 'svelte-icons/io/IoMdAdd.svelte'
+  import PlusIcon from '~icons/ion/plus-round'
 </script>
 
 <Seo
@@ -67,7 +67,7 @@
     <MainFeature title="Questions and Support">
       <div slot="icon">
         <img src="/images/icons/stackoverflow.svg" alt="Stackoverflow" />
-        <span class="plus-icon-container"><IoMdAdd /></span>
+        <span class="plus-icon-container"><PlusIcon /></span>
         <img src="/images/icons/github.svg" alt="GitHub" />
       </div>
       <p>
@@ -171,8 +171,10 @@
     display: inline-block;
     width: 2rem;
     height: 2rem;
+    font-size: 1.6em;
     margin: 0 1rem;
     width: 2rem;
+    text-align: center;
   }
 
   .features {
