@@ -12,49 +12,49 @@ env:
   BRANCH: main
 
 jobs:
-  # test:
-  #   timeout-minutes: 60
-  #   # We're running on ubuntu-latest, nothing special
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # As usual, we simply checkout the project
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
+  test:
+    timeout-minutes: 60
+    # We're running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v2
 
-  #     - uses: actions/setup-node@v2
-  #       with:
-  #         node-version: '16.x'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
 
-  #     - name: Install dependencies
-  #       run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-  #     - name: Run lints
-  #       run: npm run lint
+      #     - name: Run lints
+      #       run: npm run lint
 
-  #     - name: Run checks
-  #       run: npm run check
+      #     - name: Run checks
+      #       run: npm run check
 
-  #     - name: Install Playwright
-  #       run: npx playwright install --with-deps
+      #     - name: Install Playwright
+      #       run: npx playwright install --with-deps
 
-  #     - name: Build and test site
-  #       run: npm run test
+      - name: Build and test site
+        run: npm run build
 
-  #     # And lastly, we upload the generated build/ folder as artifact so we can
-  #     # use it in later steps.
-  #     - name: Upload build and .svelte-kit folder
-  #       uses: actions/upload-artifact@v2
-  #       with:
-  #         name: build
-  #         if-no-files-found: error
-  #         path: build
-  #         retention-days: 1
+      # And lastly, we upload the generated build/ folder as artifact so we can
+      # use it in later steps.
+      - name: Upload build and .svelte-kit folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
+          retention-days: 1
 
   deploy:
     # Only run if merged to main.
     if: github.ref == 'refs/heads/main'
     # Only deploy if all tests passed.
-    # needs: [test]
+    needs: [test]
 
     runs-on: ubuntu-latest
 
