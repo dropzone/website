@@ -17,7 +17,7 @@
   description="Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
 />
 
-<Intro title="File uploads made easy" backgroundImage="js">
+<Intro title="File uploads made easy">
   <p>
     <strong>Dropzone.js</strong> is one of the most popular drag and drop
     JavaScript libraries. It is
