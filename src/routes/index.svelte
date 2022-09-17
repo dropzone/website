@@ -1,205 +1,177 @@
 <script>
   import Actions from '$lib/Actions.svelte'
   import { events, trackClick, trackViewed } from '$lib/actions/track'
+  import CheckList from '$lib/CheckList.svelte'
   import ContentSection from '$lib/ContentSection.svelte'
-  import Feature from '$lib/Feature.svelte'
-  import FeatureSet from '$lib/FeatureSet.svelte'
+  import Dropzone from '$lib/Dropzone.svelte'
   import Heading from '$lib/Heading.svelte'
   import Intro from '$lib/Intro.svelte'
+  import MainFeature from '$lib/MainFeature.svelte'
+  import MainFeatures from '$lib/MainFeatures.svelte'
   import Seo from '$lib/Seo.svelte'
   import StyledLink from '$lib/StyledLink.svelte'
+  import PlusIcon from '~icons/ion/plus-round'
 </script>
 
-<Seo />
+<Seo
+  title="Dropzone.js"
+  description="Dropzone.js is an open source library that provides beautiful and easy to use drag'n'drop file uploads with image previews."
+/>
 
-<Intro title="Tools to build great forms">
+<Intro title="File uploads made easy" backgroundImage="js">
   <p>
-    Use the free and Open Source JavaScript library <strong>Dropzone.js</strong>
-    to handle drag and dropping of files into your form.
+    <strong>Dropzone.js</strong> is one of the most popular drag and drop
+    JavaScript libraries. It is
+    <strong>free</strong>, <strong>fully open source</strong>, and makes it easy
+    for you to handle dropped files on your website.
   </p>
 
-  <p>
-    If you don't want to maintain your own server, simply use{' '}
-    <strong>Dropzone Plus</strong>, a hosted solution that will take care of the
-    data for you.
-  </p>
+  <p>It's meant to look good by default, and is highly customizable.</p>
 
   <Actions>
-    <StyledLink href="/plus/" color="white">Dropzone Plus</StyledLink>
-    <StyledLink href="/js/" color="white" variant="text">Dropzone.js</StyledLink
-    >
-  </Actions>
-
-  <div slot="visual" class="visual">
-    <img src="/images/dropzone-grid.png" alt="Dropzone example" />
-  </div>
-</Intro>
-
-<ContentSection>
-  <div class="dropzone-plus">
-    <div class="dropzone-plus__content">
-      <Heading subtitle="A subscription model for your forms"
-        >Let us take care of processing your forms</Heading
-      >
-      <FeatureSet>
-        <Feature title="Inexpensive">
-          <p>
-            Starting at just $4/month your form data is handled for you. No
-            hidden costs, cancel any time.
-          </p>
-        </Feature>
-        <Feature title="Easy setup">
-          <p>
-            Get started in just a few minutes. You won't even notice you're
-            doing it.
-          </p>
-        </Feature>
-        <Feature title="Secure &amp; robust">
-          <p>
-            Our servers run on kubernetes clusters and scale to your demand. No
-            downtime or slow uploads when you experience user spikes.
-          </p>
-        </Feature>
-        <Feature title="Handle files">
-          <p>
-            Let your users send you files through a form on your website and get
-            a link to them via email or access them in the dashboard.
-          </p>
-        </Feature>
-      </FeatureSet>
-
-      <Actions>
-        <StyledLink
-          use={[trackClick, events.createAccount]}
-          href="https://plus.dropzone.dev/register"
-          color="primary"
-          ><span use:trackViewed={events.plusActionsViewed}>Create account</span
-          ></StyledLink
-        >
-        <StyledLink
-          use={[trackClick, events.learnMoreAboutPlus]}
-          href="/plus/"
-          color="primary"
-          variant="text">Learn more</StyledLink
-        >
-      </Actions>
-    </div>
-    <div class="dropzone-plus__visual">
-      <img src="/images/dropzone-plus.png" alt="Illustration" />
-    </div>
-  </div>
-</ContentSection>
-<ContentSection backgroundColor="white">
-  <div class="dropzonejs-heading">
-    <div>
-      <Heading subtitle="A JavaScript file upload library with image previews"
-        >The drag'n'drop library you've come to love</Heading
-      >
-    </div>
-    <div class="dropzonejs-heading__image">
-      <img src="/images/dropzonejs-samples.png" alt="" />
-    </div>
-  </div>
-  <FeatureSet>
-    <Feature title="Completely free">
-      <p>
-        Dropzone has always been and will always be{' '}
-        <strong>open source</strong>, released under the{' '}
-        <strong>MIT license</strong>.
-      </p>
-    </Feature>
-    <Feature title="Image previews">
-      <p>
-        Show previews of the files being dragged in the browser with no line of
-        code.
-      </p>
-    </Feature>
-    <Feature title="7 years and going">
-      <p>One of the first file drag'n'drop libraries and still maintained.</p>
-    </Feature>
-    <Feature title="Chunked uploads">
-      <p>Upload big files in chunks instead of one big file.</p>
-    </Feature>
-    <Feature title="Wide browser support">
-      <p>
-        Tested and used in many different ecosystems and browsers. Even in the
-        browser that shall remain unnamed.
-      </p>
-    </Feature>
-    <Feature title="Good looking by default">
-      <p>
-        Dropzone has been created to look good out of the box. Want a different
-        look? Everything's customizable.
-      </p>
-    </Feature>
-    <Feature title="Fully customizable">
-      <p>
-        Dropzone is extremely customizable, and the look and feel can be changed
-        completely.
-      </p>
-    </Feature>
-    <Feature title="Trusted by millions">
-      <p>
-        With over 15k stars on GitHub, and over 300.000 downloads{' '}
-        <strong>a week</strong> on npm, Dropzone is quite popular.
-      </p>
-    </Feature>
-  </FeatureSet>
-
-  <Actions>
-    <StyledLink href="/js/" color="primary">Learn more</StyledLink>
-    <StyledLink href="https://docs.dropzone.dev" color="primary" variant="text"
+    <StyledLink href="https://docs.dropzone.dev/" color="white"
       >Documentation</StyledLink
     >
+    <StyledLink
+      href="https://docs.dropzone.dev/getting-started/installation/stand-alone"
+      color="white"
+      variant="text">Download</StyledLink
+    >
   </Actions>
+
+  <Dropzone slot="visual" />
+</Intro>
+<ContentSection backgroundColor="white">
+  <MainFeatures>
+    <MainFeature title="Source code on GitHub">
+      <img slot="icon" src="/images/icons/github.svg" alt="GitHub" />
+      <p>
+        You can get all the source code on GitHub, as well as installation
+        instructions. If you encounter an issue with this library, this is the
+        place to create an issue.
+      </p>
+      <StyledLink slot="actions" href="https://github.com/dropzone/dropzone"
+        >GitHub</StyledLink
+      >
+    </MainFeature>
+    <MainFeature title="Documentation">
+      <img slot="icon" src="/images/icons/gitbook.svg" alt="GitBook" />
+      <p>
+        All the documentation about Dropzone, and the multiple ways to configure
+        and customise it, can be found on GitBook.
+      </p>
+      <StyledLink slot="actions" href="https://docs.dropzone.dev"
+        >Docs</StyledLink
+      >
+    </MainFeature>
+    <MainFeature title="Questions and Support">
+      <div slot="icon">
+        <img src="/images/icons/stackoverflow.svg" alt="Stackoverflow" />
+        <span class="plus-icon-container"><PlusIcon /></span>
+        <img src="/images/icons/github.svg" alt="GitHub" />
+      </div>
+      <p>
+        If you need help, there are{' '}
+        <a href="https://github.com/dropzone/dropzone/discussions">
+          GitHub Discussions
+        </a>{' '}
+        and Stackoverflow. Use the tag dropzonejs and there'll be plenty of people
+        helping you out.
+      </p>
+      <StyledLink
+        slot="actions"
+        href="https://stackoverflow.com/questions/tagged/dropzone.js"
+        >Stack Overflow</StyledLink
+      >
+    </MainFeature>
+  </MainFeatures>
+</ContentSection>
+
+<ContentSection>
+  <Heading subtitle="And it's easy to add the features you want"
+    >Dropzone.js comes feature packed</Heading
+  >
+  <div class="features">
+    <div class="features__description">
+      <h2>Built to last</h2>
+      <p>
+        Dropzone is a robust library trusted by millions. It started in 2012
+        with compatibility in mind. Whether your users use an outdated browser,
+        or have JavaScript enabled, Dropzone got you covered.
+      </p>
+    </div>
+    <div class="features__list">
+      <CheckList
+        items={[
+          'Chunked uploads',
+          'Error handling',
+          'Well tested',
+          'Wide browser support',
+          'Fallback without JavaScript',
+          'Fully customizable',
+          'Open Source',
+          'Translation support',
+          'jQuery plugin',
+          'File queues',
+          'Multiple installation options',
+        ]}
+      />
+    </div>
+  </div>
+  <div class="features">
+    <div class="features__description">
+      <h2>Looking good by default</h2>
+      <p>
+        One main goal when creating Dropzone was to have file previews that are
+        not only practical, but also look good. That's why the default design of
+        Dropzone looks great without you needing to do anything.
+      </p>
+    </div>
+    <div class="features__list">
+      <CheckList
+        items={[
+          'Good looking defaults',
+          'Image Previews',
+          'Progress Bars',
+          'Success & error icons',
+          'Themes',
+        ]}
+      />
+    </div>
+  </div>
 </ContentSection>
 
 <style>
-  .visual {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 3rem;
-    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
-  }
-  .visual img {
-    max-width: 100%;
-    width: 270px;
-    display: block;
+  .plus-icon-container {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.6em;
+    margin: 0 1rem;
+    width: 2rem;
+    text-align: center;
   }
 
-  .dropzonejs-heading img {
-    display: block;
-    width: 380px;
+  .features {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3rem;
   }
-  @media (min-width: 1000px) {
-    .dropzonejs-heading {
-      display: flex;
+  @media (min-width: 800px) {
+    .features {
+      flex-direction: row;
+      gap: 3rem;
     }
-    .dropzonejs-heading > * {
-      flex: 1;
-    }
-    .dropzonejs-heading__image {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
+    .features__list {
       padding-top: 1.5rem;
     }
   }
-
-  .dropzone-plus__content {
-    flex: 1;
-    margin-bottom: 3rem;
+  .features__description h2 {
+    font-weight: bold;
+    color: var(--title-color);
   }
-  .dropzone-plus__visual {
+  .features__description,
+  .features__list {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (min-width: 940px) {
-    .dropzone-plus {
-      display: flex;
-    }
   }
 </style>

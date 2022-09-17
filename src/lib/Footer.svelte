@@ -24,22 +24,6 @@
         </li>
       </ul>
     </div>
-    <div class="dropzone-plus">
-      <h3>Dropzone Plus</h3>
-      <ul>
-        <li>
-          <a sveltekit:prefetch href="/plus/">Overview</a>
-        </li>
-        <li>
-          <a class="secondary" href="https://docs-plus.dropzone.dev"
-            >Documentation</a
-          >
-        </li>
-        <li>
-          <a class="secondary" href="https://plus.dropzone.dev">Dashboard</a>
-        </li>
-      </ul>
-    </div>
     <div class="social">
       <h3>Social</h3>
       <ul>
@@ -48,17 +32,6 @@
         </li>
         <li>
           <a href="https://blog.dropzone.dev">Blog</a>
-        </li>
-      </ul>
-    </div>
-    <div class="legal">
-      <h3>Legal</h3>
-      <ul>
-        <li>
-          <a sveltekit:prefetch href="/terms-of-service">Terms of Service</a>
-        </li>
-        <li>
-          <a sveltekit:prefetch href="/privacy">Privacy Policy</a>
         </li>
       </ul>
     </div>
@@ -100,13 +73,12 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       'home home'
-      'js plus'
-      'social legal';
+      'js social';
   }
   @media (min-width: 800px) {
     nav {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: 'home js plus social legal';
+      grid-template-areas: 'home js social';
     }
   }
   .dropzone-home {
@@ -115,14 +87,8 @@
   .dropzone-js {
     grid-area: js;
   }
-  .dropzone-plus {
-    grid-area: plus;
-  }
   .social {
     grid-area: social;
-  }
-  .legal {
-    grid-area: legal;
   }
 
   h3 {

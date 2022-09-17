@@ -1,13 +1,10 @@
 <script type="ts">
   import { page } from '$app/stores'
-  import { events, trackClick } from '$lib/actions/track'
-  import StyledLink from '$lib/StyledLink.svelte'
   import WhiteLogoSvg from '$lib/WhiteLogoSvg.svelte'
 
-  import LogoMedium from '~icons/ion/logo-medium'
   import LogoGithub from '~icons/ion/logo-github'
+  import LogoMedium from '~icons/ion/logo-medium'
   import LogoTwitter from '~icons/ion/logo-twitter'
-  import IoMdBook from '~icons/ion/md-book'
 
   $: section = $page.url.pathname.split('/')[1]
 
@@ -17,36 +14,7 @@
 <nav class:mobile class:desktop={!mobile}>
   <a class="link" href="/"><WhiteLogoSvg /></a>
 
-  <div class="menu__main">
-    <span
-      class="link link--pill link--with-docs"
-      class:link--active={section === 'js'}
-    >
-      <a sveltekit:prefetch href="/js/" class="link__text">Dropzone.js </a>
-      <a
-        href="http://docs.dropzone.dev"
-        target="_blank"
-        rel="nofollow"
-        class="link__docs"
-      >
-        <span class="link__icon"><IoMdBook /></span>
-      </a>
-    </span>
-    <span
-      class="link link--pill link--with-docs"
-      class:link--active={section === 'plus'}
-    >
-      <a sveltekit:prefetch href="/plus/" class="link__text">Dropzone Plus </a>
-      <a
-        href="http://docs-plus.dropzone.dev"
-        target="_blank"
-        rel="nofollow"
-        class="link__docs"
-      >
-        <span class="link__icon"><IoMdBook /></span>
-      </a>
-    </span>
-  </div>
+  <div class="menu__main" />
 
   <div class="menu__actions">
     <a
@@ -73,12 +41,6 @@
     >
       <span class="link__icon"><LogoMedium /></span>
     </a>
-    <span /><!-- spacer -->
-    <StyledLink
-      use={[trackClick, events.signIn]}
-      href="https://plus.dropzone.dev"
-      variant="contained">Sign in</StyledLink
-    >
   </div>
 </nav>
 
