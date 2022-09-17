@@ -1,6 +1,5 @@
 <script>
   import Actions from '$lib/Actions.svelte'
-  import { events, trackClick, trackViewed } from '$lib/actions/track'
   import CheckList from '$lib/CheckList.svelte'
   import ContentSection from '$lib/ContentSection.svelte'
   import Dropzone from '$lib/Dropzone.svelte'
