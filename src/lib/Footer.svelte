@@ -35,6 +35,21 @@
         </li>
       </ul>
     </div>
+    <div class="projects">
+      <h3>Other projects</h3>
+      <ul>
+        <li>
+          <a href="https://www.pausly.app/">Pausly</a><br />
+          <small
+            >Take short (stretch) breaks with your friends and colleagues.</small
+          >
+        </li>
+        <li>
+          <a href="https://melodle.yesmeno.com">Melodle</a><br />
+          <small>Like wordle, but for music.</small>
+        </li>
+      </ul>
+    </div>
   </nav>
 </footer>
 
@@ -68,17 +83,25 @@
     font-size: 0.875rem;
     display: grid;
     gap: 1.5rem;
-    line-height: 2;
+    line-height: 1.5;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      'home home'
-      'js social';
+      'home     home'
+      'js       social'
+      'projects projects';
+  }
+  nav small {
+    line-height: 1.2;
+    display: inline-block;
+  }
+  nav li {
+    margin: 0.5rem 0;
   }
   @media (min-width: 800px) {
     nav {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: 'home js social';
+      grid-template-areas: 'home js social projects';
     }
   }
   .dropzone-home {
