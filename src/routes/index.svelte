@@ -7,6 +7,7 @@
   import Intro from '$lib/Intro.svelte'
   import MainFeature from '$lib/MainFeature.svelte'
   import MainFeatures from '$lib/MainFeatures.svelte'
+  import MenoTeaser from '$lib/MenoTeaser.svelte'
   import Seo from '$lib/Seo.svelte'
   import StyledLink from '$lib/StyledLink.svelte'
   import PlusIcon from '~icons/ion/plus-round'
@@ -86,7 +87,9 @@
   </MainFeatures>
 </ContentSection>
 
-<ContentSection>
+<MenoTeaser />
+
+<ContentSection backgroundColor="white">
   <Heading subtitle="And it's easy to add the features you want"
     >Dropzone.js comes feature packed</Heading
   >
